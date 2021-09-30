@@ -82,7 +82,7 @@ body {
     color: var(--cor1);
     /* cursor: url(Cursor.cur) 4 12, pointer; */
     overflow: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     display: flex;
@@ -96,15 +96,11 @@ header {
 main {
     width: 100vw;
     height: 100vh;
-    scroll-snap-type: y mandatory;
-    /* perspective: 300px; */
-
+    scroll-snap-type: y proximity;
     perspective: 300px;
     -webkit-perspective: 300;
-
     -moz-perspective: 300px;
     -ms-perspective: 300px;
-
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -146,7 +142,7 @@ section {
     background-color: var(--backgroungsectionhello);
 
     /* scroll-snap-align: start; */
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
 
 
 }
@@ -276,7 +272,8 @@ section {
 .hello {
     z-index: 5;
     background-color: var(--backgroungsectionhello);
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
+    scroll-snap-align: none ;
 
     -webkit-transform-style: initial;
     transform-style: preserve-3d;
@@ -492,6 +489,8 @@ section {
 
 /* -------------------------------- Projecto 1 -------------------------------------- */
 .project1 {
+    scroll-padding: 500px;
+    scroll-snap-align: center;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -500,7 +499,6 @@ section {
     align-items: center;
     background-color: var(--corproject1);
     position: sticky;
-    scroll-snap-align: center;
     z-index: 4;
 
     -webkit-transform-style: preserve-3d;
@@ -564,10 +562,15 @@ section {
     background-color: var(--corriscosectionproject1);
 }
 
+#teste_cronometro {
+    animation: cronometro2 2s 15s infinite both;
+    animation-play-state: paused; 
+}
+
 #cronometro {
     width: 100%;
     height: 100%;
-    animation: cronometro 0.8s 2s 4 both;
+    /* animation: cronometro 0.8s 2s 4 both; */
     transition: 0.5s ease-in;
     opacity: 1; 
     animation-play-state: paused;  
@@ -636,6 +639,28 @@ section {
       transform: translateX(9px) rotate(2.4deg);
     }
     75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+  @keyframes cronometro2 {
+    0% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+    1% {
+      transform: translateX(-30px) rotate(-6deg);
+    }
+    10% {
+      transform: translateX(15px) rotate(6deg);
+    }
+    20% {
+      transform: translateX(-15px) rotate(-3.6deg);
+    }
+    30% {
+      transform: translateX(9px) rotate(2.4deg);
+    }
+    40% {
       transform: translateX(-6px) rotate(-1.2deg);
     }
   }
@@ -817,7 +842,7 @@ section {
 
 /*
 #espaço_imagem2 {
-    z-index: -999;
+    z-index: 4;
     display: flex;
     justify-content: center;
 }
@@ -827,9 +852,9 @@ section {
     color: var(--corhgroug3);
     grid-column: 2;
     opacity: 0;
-
     transform: rotateY(0deg);
     transform: translateX(-10vw) translateY(0px) translateZ(-175px) scale(1.58);
+    z-index: 5;
 }
 
 .e76761db-4c34-4d8e-8a94-e538cc636aac {
@@ -860,7 +885,7 @@ section {
     transition: 0.5s ease-in;
     opacity: 1; 
     animation-play-state: paused;  
-    z-index: 990;
+    z-index: -15;
 }
 
 #mm2 {
@@ -877,14 +902,14 @@ section {
     transform-box: fill-box;
     transform: scale(1.5) translateZ(-175px);
     -webkit-transform: scale(1.5);
-    z-index: -999;
+    z-index: -10;
 }
 
 #_mm1, #_mm2, #_mm3, #_mm4, #_mm5, #_mm6, #_mm7, #_mm8, #_mm9, #_mm10, #_mm11 {
-    animation: mm 1s ;
+    animation: mm 1s infinite;
     position: absolute;
     transform: translateY(-1500px);
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
     animation-play-state: paused;
     transition: 0.5s ease-in-out;
 }
@@ -950,7 +975,6 @@ section {
     height: 20vh;
     background-color: var(--correctanguloprojecto2);
     border-radius: 30px 0px 0px 30px;
-    z-index: 0;
     bottom: 5vh;
     right: 0vw;
     transition: 0.5s ease-in-out;
@@ -1037,6 +1061,7 @@ section {
     100% {
       transform: translateY(0);
       animation-timing-function: ease-out;
+      opacity: 0;
     }
   }
 
@@ -1101,13 +1126,10 @@ section {
     position: sticky;
     scroll-snap-align: center;
     z-index: 4;
-
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-
     -moz-transform-style: inherit;
     transform: rotateY(0deg);
-
 }
 
 /*
@@ -1121,7 +1143,6 @@ section {
     color: var(--corhgroug4);
     grid-column: 2;
     z-index: 5;
-
     transform: rotateY(0deg);
     transform: translateX(-10vw) translateY(0px) translateZ(-175px) scale(1.58);
     opacity: 0;
@@ -1135,6 +1156,11 @@ section {
     opacity: 0;
     transition: 0.2s ease-in-out;
     animation-play-state: paused;  
+}
+
+#teste_pinypong {
+    /* animation: testepinypong 4s ease-in 2s both; */
+    animation-play-state: paused;
 }
 
 #pinypong {
@@ -1152,21 +1178,21 @@ section {
     animation-play-state: paused;
     transform-box: fill-box;
     transform-origin: center;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
 }
 
 #p1 {
     animation-play-state: paused;
     transform-box: fill-box;
     transform-origin: center;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
 }
 
 #bola_pinypong {
     animation-play-state: paused;
     transform-box: fill-box;
     transform-origin: center;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
 }
 
 #rectangulo3 {
@@ -1265,22 +1291,27 @@ section {
     }
 }
 
-
-@keyframes p2 {
+@keyframes testepinypong {
     0% {
         opacity: 0;
-        transform: translateX(1500px) rotate(90deg);
-        transform-origin: 50% 50%;
     }
-      15% {
+      100% {
         opacity: 1;
-        transform: translateX(-10px) rotate(88deg);
       }
-      35% {
+ 
+}
+
+@keyframes p2 {
+      0% {
         opacity: 1;
-        transform: translateX(250px) rotate(90deg);
+        transform: translateX(-10px) rotate(90deg);
+        transform-origin: 50% 50%;
       }
-      55% {
+      25% {
+        opacity: 1;
+        transform: translateX(200px) rotate(90deg);
+      }
+      50% {
         opacity: 1;
         transform: translateX(150px) rotate(90deg);
       }
@@ -1290,67 +1321,54 @@ section {
       }
       100% {
         opacity: 1;
-        transform: translateX(100px) rotate(90deg);
+        transform: translateX(-10px) rotate(90deg);
       }
 }
 
 @keyframes p1 {
     0% {
-        opacity: 0;
-        transform: translateX(1500px) rotate(90deg);
-        transform-origin: 50% 50%;
-    }
-      15% {
         opacity: 1;
-        transform: translateX(250px) rotate(88deg);
+        transform: translateX(0px) rotate(90deg);
+        transform-origin: 50% 50%;
       }
-      35% {
+      25% {
         opacity: 1;
         transform: translateX(-10px) rotate(90deg);
       }
-      55% {
+      50% {
         opacity: 1;
-        transform: translateX(50px) rotate(90deg);
+        transform: translateX(100px) rotate(90deg);
       }
-      85% {
+      75% {
         opacity: 1;
         transform: translateX(200px) rotate(90deg);
       }
       100% {
         opacity: 1;
-        transform: translateX(150px) rotate(90deg);
+        transform: translateX(0px) rotate(90deg);
       }
 }
 
 @keyframes bola_pinypong {
     0% {
-        opacity: 0;
-        transform: translateX(1500px);
-        transform-origin: 50% 50%;
-    }
-      20% {
-        opacity: 1;
-        transform: translateX(200px);
-      }
-      40% {
         opacity: 1;
         transform: translateY(940%);
       }
-      60% {
+      25% {
         opacity: 1;
         transform: translateY(-940%) translateX(100px);
       }
-      80% {
+      50% {
         opacity: 1;
         transform: translateY(940%) translateX(100px);
       }
-      90% {
+      75% {
         opacity: 1;
         transform: translateY(-940%);
       }
       100% {
         opacity: 1;
-        transform: translateY(1050%) translateX(-100px);
+        transform: translateY(940%) translateX(0px);
       }
 }
 
