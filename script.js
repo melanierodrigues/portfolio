@@ -91,7 +91,8 @@ var numeros = document.getElementById('numeros');
 var hgroup2 = document.getElementById('hgroup2'); 
 var rectangulo = document.getElementById('rectangulo'); 
 var risco = document.getElementById('risco');
-var link_site = document.getElementById('link_site');
+var link_site = document.getElementById('link_site'); 
+var teste_cronometro = document.getElementById('teste_cronometro');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
@@ -108,7 +109,12 @@ observer = new IntersectionObserver ((entries) => {
                 linkedin.style.stroke = "var(--corhgroug2)";
 
                 cronometro.style.animationPlayState = "running";
+                teste_cronometro.style.animationPlayState = "running";
                 figureCronometro.style.animation = "rolar 0.6s ease-out 1s both";
+
+                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
+
+
                 numeros.style.animation = "texto2 2s linear 2s 2 both";
                 risco.style.opacity = "1";
                 rectangulo.style.animation = "rec1 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both";
@@ -125,7 +131,6 @@ observer = new IntersectionObserver ((entries) => {
                 cronometro.style.animationPlayState = "paused";
 
                 hgroup2.style.opacity = "0"; 
-                //hgroup3.style.opacity = "0";
             }
         }
         requestAnimationFrame(projecto1);
@@ -178,6 +183,9 @@ observer = new IntersectionObserver ((entries) => {
                 github.style.stroke = "var(--corhgroug3)";
                 linkedin.style.stroke = "var(--corhgroug3)";
 
+                hgroup3.style.opacity = "1"; 
+                hgroup3.style.animation = "opacity1 3s ease-in";
+
                 mm1.style.animationPlayState = "running";
                 mm2.style.animationPlayState = "running";
                 mm3.style.animationPlayState = "running";
@@ -203,15 +211,8 @@ observer = new IntersectionObserver ((entries) => {
 
                 link_site.style.opacity = "0";   
                 link_site.style. transition = "0.8s ease-in-out";
-
-                hgroup3.style.opacity = "1"; 
-                hgroup3.style.animation = "opacity1 3s ease-in";
               
             } else {
-                //hgroup4.style.opacity = "0"; 
-                hgroup3.style.opacity = "0"; 
-
-                
 
                 mm1.style.animationPlayState = "paused";
                 mm2.style.animationPlayState = "paused";
@@ -248,6 +249,7 @@ var bola_pinypong = document.getElementById('bola_pinypong');
 
 var uni1 = document.getElementById('uni1');
 var uni2 = document.getElementById('uni2');
+var teste_pinypong = document.getElementById('teste_pinypong');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
@@ -277,13 +279,15 @@ observer = new IntersectionObserver ((entries) => {
                 rectangulo3.style.animationPlayState = "running";
                 pinypong.style.animationPlayState = "running";
                 risco3.style.animationPlayState = "running";
+                teste_pinypong.style.animationPlayState = "running";
+                teste_pinypong.style.animation = "testepinypong 2s ease-in 2s both";
 
-                bola_pinypong.style.animation = "bola_pinypong 4s ease-in 2s both";
-                p1.style.animation = "p1 4s ease-in 2s both";
-                p2.style.animation = "p2 4s ease-in 2s both";
+                bola_pinypong.style.animation = "bola_pinypong 3s ease-in 2s  infinite";
+                p1.style.animation = "p1 3s ease-in 2s  infinite";
+                p2.style.animation = "p2 3s ease-in 2s  infinite";
 
-                uni1.style.animation = "uni1 1.8s ease-in-out 7s infinite";
-                uni2.style.animation = "uni2 1.8s ease-in-out 7s infinite";
+                uni1.style.animation = "uni1 1.8s ease-in-out 3s infinite";
+                uni2.style.animation = "uni2 1.8s ease-in-out 3s infinite";
 
                 bola_pinypong.style.animationPlayState = "running";
                 p1.style.animationPlayState = "running";
@@ -331,8 +335,6 @@ observer = new IntersectionObserver ((entries) => {
 
                 //footer1.style.visibility = "visible";
                 //footer1.style.display = "flex";
-
-                //hgroup4.style.opacity = "0"; 
 
                 link_site3.style.opacity = "0";   
                 link_site3.style. transition = "1s ease-in-out";
