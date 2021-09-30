@@ -489,8 +489,7 @@ section {
 
 /* -------------------------------- Projecto 1 -------------------------------------- */
 .project1 {
-    scroll-padding: 500px;
-    scroll-snap-align: center;
+    scroll-snap-align: end;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -830,7 +829,7 @@ section {
     align-items: center;
     background-color: var(--corproject2);
     position: sticky;
-    scroll-snap-align: center;
+    scroll-snap-align: end;
     z-index: 3;
 
     -webkit-transform-style: preserve-3d;
@@ -1124,7 +1123,7 @@ section {
     align-items: center;
     background-color: var(--corproject3);
     position: sticky;
-    scroll-snap-align: center;
+    scroll-snap-align: end;
     z-index: 4;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
