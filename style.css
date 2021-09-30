@@ -82,7 +82,7 @@ body {
     color: var(--cor1);
     /* cursor: url(Cursor.cur) 4 12, pointer; */
     overflow: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     display: flex;
@@ -96,15 +96,11 @@ header {
 main {
     width: 100vw;
     height: 100vh;
-    scroll-snap-type: y mandatory;
-    /* perspective: 300px; */
-
+    scroll-snap-type: y proximity;
     perspective: 300px;
     -webkit-perspective: 300;
-
     -moz-perspective: 300px;
     -ms-perspective: 300px;
-
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -146,7 +142,7 @@ section {
     background-color: var(--backgroungsectionhello);
 
     /* scroll-snap-align: start; */
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
 
 
 }
@@ -276,7 +272,8 @@ section {
 .hello {
     z-index: 5;
     background-color: var(--backgroungsectionhello);
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
+    scroll-snap-align: none ;
 
     -webkit-transform-style: initial;
     transform-style: preserve-3d;
@@ -492,6 +489,8 @@ section {
 
 /* -------------------------------- Projecto 1 -------------------------------------- */
 .project1 {
+    scroll-padding: 500px;
+    scroll-snap-align: center;
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -500,7 +499,6 @@ section {
     align-items: center;
     background-color: var(--corproject1);
     position: sticky;
-    scroll-snap-align: center;
     z-index: 4;
 
     -webkit-transform-style: preserve-3d;
@@ -797,6 +795,7 @@ section {
 
 /* -------------------------------- Projecto 2 -------------------------------------- */
 .project2 {
+    scroll-padding: 500px;
     width: 100vw;
     height: 100vh;
     display: grid;
