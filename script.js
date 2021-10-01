@@ -58,26 +58,19 @@ observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function hello1() {
-
             if(entry.intersectionRatio > 0) {
-                
                 codepen.style.fill = "var(--cor3)";
                 github.style.fill = "var(--cor3)";
                 linkedin.style.fill = "var(--cor3)";
-
                 codepen.style.stroke = "var(--cor3)";
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
-                
-
+                hgroup2.style.opacity = "0"; 
             } else {
-
             }
         }
         requestAnimationFrame(hello1);
-
     })
-
 });
 
 observer.observe(hgroup1);
@@ -103,40 +96,27 @@ observer = new IntersectionObserver ((entries) => {
                 codepen.style.fill = "var(--corhgroug2)";
                 github.style.fill = "var(--corhgroug2)";
                 linkedin.style.fill = "var(--corhgroug2)";
-
                 codepen.style.stroke = "var(--corhgroug2)";
                 github.style.stroke = "var(--corhgroug2)";
                 linkedin.style.stroke = "var(--corhgroug2)";
-
                 cronometro.style.animationPlayState = "running";
                 teste_cronometro.style.animationPlayState = "running";
-                figureCronometro.style.animation = "rolar 0.6s ease-out 1s both";
-
+                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
                 cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
-
-
                 numeros.style.animation = "texto2 2s linear 2s 2 both";
                 risco.style.opacity = "1";
                 rectangulo.style.animation = "rec1 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both";
-
                 hgroup2.style.animation = "opacity1 3s ease-in";
                 hgroup2.style.opacity = "1";
-
                 link_site.style.opacity = "1";
                 link_site.style.animation = "opacity1 5s ease-in";
-
-
             } else {
                 risco.style.opacity = "0";
-                cronometro.style.animationPlayState = "paused";
-
-                hgroup2.style.opacity = "0"; 
+                //hgroup2.style.opacity = "0"; 
             }
         }
         requestAnimationFrame(projecto1);
-
     })
-
 });
 
 observer.observe(cronometro);
@@ -148,12 +128,9 @@ observer.observe(cronometro);
 var project2 = document.getElementsByClassName('project2');
 var calculadora = document.getElementById('calculadora');
 var mm = document.getElementById('mm');
-
 var hgroup3 = document.getElementById('hgroup3');
 var hgroup4 = document.getElementById('hgroup4');
-
 var link_site2 = document.getElementById('link_site2');
-
 var mm1 = document.getElementById('_mm1'); 
 var mm2 = document.getElementById('_mm2'); 
 var mm3 = document.getElementById('_mm3'); 
@@ -165,7 +142,6 @@ var mm8 = document.getElementById('_mm8');
 var mm9 = document.getElementById('_mm9'); 
 var mm10 = document.getElementById('_mm10'); 
 var mm11 = document.getElementById('_mm11'); 
-
 var rectangulo2 = document.getElementById('rectangulo2');
 var risco2 = document.getElementById('risco2');
 
@@ -178,14 +154,11 @@ observer = new IntersectionObserver ((entries) => {
                 codepen.style.fill = "var(--corhgroug3)";
                 github.style.fill = "var(--corhgroug3)";
                 linkedin.style.fill = "var(--corhgroug3)";
-
                 codepen.style.stroke = "var(--corhgroug3)";
                 github.style.stroke = "var(--corhgroug3)";
                 linkedin.style.stroke = "var(--corhgroug3)";
-
                 hgroup3.style.opacity = "1"; 
                 hgroup3.style.animation = "opacity1 3s ease-in";
-
                 mm1.style.animationPlayState = "running";
                 mm2.style.animationPlayState = "running";
                 mm3.style.animationPlayState = "running";
@@ -197,36 +170,18 @@ observer = new IntersectionObserver ((entries) => {
                 mm9.style.animationPlayState = "running";
                 mm10.style.animationPlayState = "running";
                 mm11.style.animationPlayState = "running";
-
                 risco2.style.opacity = "1";
                 rectangulo2.style.animation = "rec1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both";
                 calculadora.style.animation = "calculadora 5s ease-out 0.8s both";
-
                 link_site2.style.opacity = "1";
                 link_site2.style.animation = "opacity1 5s ease-in";
-
                 rectangulo2.style.animationPlayState = "running";
                 calculadora.style.animationPlayState = "running";
                 risco2.style.animationPlayState = "running";
-
                 link_site.style.opacity = "0";   
                 link_site.style. transition = "0.8s ease-in-out";
               
             } else {
-
-                mm1.style.animationPlayState = "paused";
-                mm2.style.animationPlayState = "paused";
-                mm3.style.animationPlayState = "paused";
-                mm4.style.animationPlayState = "paused";
-                mm5.style.animationPlayState = "paused";
-                mm6.style.animationPlayState = "paused";
-                mm7.style.animationPlayState = "paused";
-                mm8.style.animationPlayState = "paused";
-                mm9.style.animationPlayState = "paused";
-                mm10.style.animationPlayState = "paused";
-                mm11.style.animationPlayState = "paused";
-
-
             }
         }
         requestAnimationFrame(projecto2);
@@ -242,11 +197,9 @@ var rectangulo3 = document.getElementById('rectangulo3');
 var pinypong = document.getElementById('pinypong');
 var link_site3 = document.getElementById('link_site3');
 var risco3 = document.getElementById('risco3');
-
 var p1 = document.getElementById('p1');
 var p2 = document.getElementById('p2');
 var bola_pinypong = document.getElementById('bola_pinypong');
-
 var uni1 = document.getElementById('uni1');
 var uni2 = document.getElementById('uni2');
 var teste_pinypong = document.getElementById('teste_pinypong');
@@ -255,60 +208,41 @@ observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function projecto3() {
-
             if(entry.intersectionRatio > 0) {
-
                 codepen.style.fill = "var(--corhgroug4)";
                 github.style.fill = "var(--corhgroug4)";
                 linkedin.style.fill = "var(--corhgroug4)";
-
                 codepen.style.stroke = "var(--corhgroug4)";
                 github.style.stroke = "var(--corhgroug4)";
                 linkedin.style.stroke = "var(--corhgroug4)";
-
                 hgroup4.style.opacity = "1";   
                 hgroup4.style.animation = "opacity1 3s ease-in";
-
                 risco3.style.opacity = "1";
-                rectangulo3.style.animation = "rec1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both";
                 pinypong.style.animation = " 5s ease-out 1.5s both";
-
                 link_site3.style.opacity = "1";
                 link_site3.style.animation = "opacity1 5s ease-in";
-
+                rectangulo3.style.animation = "rec1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both";
                 rectangulo3.style.animationPlayState = "running";
                 pinypong.style.animationPlayState = "running";
                 risco3.style.animationPlayState = "running";
                 teste_pinypong.style.animationPlayState = "running";
-                teste_pinypong.style.animation = "testepinypong 2s ease-in 2s both";
-
-                bola_pinypong.style.animation = "bola_pinypong 3s ease-in 2s  infinite";
-                p1.style.animation = "p1 3s ease-in 2s  infinite";
-                p2.style.animation = "p2 3s ease-in 2s  infinite";
-
-                uni1.style.animation = "uni1 1.8s ease-in-out 3s infinite";
-                uni2.style.animation = "uni2 1.8s ease-in-out 3s infinite";
-
+                teste_pinypong.style.animation = "testepinypong 1s ease-in 0.3s both";
+                bola_pinypong.style.animation = "bola_pinypong 3s ease-in 0.3s  infinite";
+                p1.style.animation = "p1 3s ease-in 0.3s  infinite";
+                p2.style.animation = "p2 3s ease-in 0.3s  infinite";
+                uni1.style.animation = "uni1 1.8s ease-in-out 0s infinite";
+                uni2.style.animation = "uni2 1.8s ease-in-out 0s infinite";
                 bola_pinypong.style.animationPlayState = "running";
                 p1.style.animationPlayState = "running";
                 p2.style.animationPlayState = "running";
-
                 link_site2.style.opacity = "0";   
                 link_site2.style. transition = "0.8s ease-in-out";
-
             } else {
-
-                bola_pinypong.style.animationPlayState = "paused";
-                p1.style.animationPlayState = "paused";
-                p2.style.animationPlayState = "paused";
-
                 hgroup4.style.opacity = "0";
             }
         }
         requestAnimationFrame(projecto3);
-
     })
-
 });
 
 observer.observe(pinypong);
@@ -328,7 +262,6 @@ observer = new IntersectionObserver ((entries) => {
                 codepen.style.fill = "var(--cor3)";
                 github.style.fill = "var(--cor3)";
                 linkedin.style.fill = "var(--cor3)";
-
                 codepen.style.stroke = "var(--cor3)";
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
@@ -338,15 +271,11 @@ observer = new IntersectionObserver ((entries) => {
 
                 link_site3.style.opacity = "0";   
                 link_site3.style. transition = "1s ease-in-out";
-
-
             } else {
             }
         }
         requestAnimationFrame(aboutme1);
-
     })
-
 });
 
 observer.observe(foto);
