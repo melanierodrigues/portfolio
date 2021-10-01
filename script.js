@@ -105,7 +105,7 @@ observer = new IntersectionObserver ((entries) => {
                 cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
                 numeros.style.animation = "texto2 2s linear 2s 2 both";
                 risco.style.opacity = "1";
-                rectangulo.style.animation = "rec1 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s both";
+                rectangulo.style.animation = "rec1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
                 hgroup2.style.animation = "opacity1 3s ease-in";
                 hgroup2.style.opacity = "1";
                 link_site.style.opacity = "1";
@@ -237,6 +237,9 @@ observer = new IntersectionObserver ((entries) => {
                 p2.style.animationPlayState = "running";
                 link_site2.style.opacity = "0";   
                 link_site2.style. transition = "0.8s ease-in-out";
+                //redesSociaisFooter.style.opacity = "0";
+                //redesSociaisFooter.style.animationPlayState = "paused";
+                footer1.style.visibility = "hidden";
             } else {
                 hgroup4.style.opacity = "0";
             }
@@ -245,33 +248,39 @@ observer = new IntersectionObserver ((entries) => {
     })
 });
 
-observer.observe(pinypong);
+observer.observe(rectangulo3);
 
 
 
 // About Me
 var foto = document.getElementById('foto');
-var footer1 = document.getElementById('footer1');
+var footer1 = document.getElementById('footer1'); 
+var redesSociais = document.getElementById('redes_sociais');
+var redesSociaisFooter = document.getElementById('redes_sociaisfooter');  
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function aboutme1() {
 
-            if(entry.intersectionRatio > 0) {
+            if(entry.intersectionRatio > 0) {          
                 codepen.style.fill = "var(--cor3)";
                 github.style.fill = "var(--cor3)";
                 linkedin.style.fill = "var(--cor3)";
                 codepen.style.stroke = "var(--cor3)";
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
-
-                //footer1.style.visibility = "visible";
-                //footer1.style.display = "flex";
-
+                footer1.style.visibility = "visible";
                 link_site3.style.opacity = "0";   
                 link_site3.style. transition = "1s ease-in-out";
+                //redesSociais.style.display = "none";
+                //redesSociais.style.animation = "opacity1 0s ease-in-out";
+                //redesSociaisFooter.style.opacity = "1";
+                //redesSociaisFooter.style.animation = "opacity1 1s ease-in-out ";
+                //redesSociaisFooter.style.animationPlayState = "running";
             } else {
+                footer1.style.visibility = "hidden";
+                //redesSociais.style.display = "flex";
             }
         }
         requestAnimationFrame(aboutme1);
