@@ -51,6 +51,7 @@ var github = document.getElementById('github');
 var linkedin = document.getElementById('linkedin');
 
 var hgroup1 = document.getElementById('hgroup1'); 
+var folhas = document.getElementById('folhas'); 
 
 
 // Hello //
@@ -85,7 +86,8 @@ var hgroup2 = document.getElementById('hgroup2');
 var rectangulo = document.getElementById('rectangulo'); 
 var risco = document.getElementById('risco');
 var link_site = document.getElementById('link_site'); 
-var teste_cronometro = document.getElementById('teste_cronometro');
+var teste_cronometro = document.getElementById('teste_cronometro'); 
+var rodas = document.getElementById('rodas');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
@@ -106,20 +108,19 @@ observer = new IntersectionObserver ((entries) => {
                 numeros.style.animation = "texto2 2s linear 2s 2 both";
                 risco.style.opacity = "1";
                 rectangulo.style.animation = "rec1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
-                hgroup2.style.animation = "opacity1 3s ease-in";
                 hgroup2.style.opacity = "1";
+                hgroup2.style.animation = "opacity1 3s ease-in";
                 link_site.style.opacity = "1";
                 link_site.style.animation = "opacity1 5s ease-in";
             } else {
                 risco.style.opacity = "0";
-                //hgroup2.style.opacity = "0"; 
             }
         }
         requestAnimationFrame(projecto1);
     })
 });
 
-observer.observe(cronometro);
+observer.observe(rodas);
 
 
 
@@ -237,8 +238,6 @@ observer = new IntersectionObserver ((entries) => {
                 p2.style.animationPlayState = "running";
                 link_site2.style.opacity = "0";   
                 link_site2.style. transition = "0.8s ease-in-out";
-                //redesSociaisFooter.style.opacity = "0";
-                //redesSociaisFooter.style.animationPlayState = "paused";
                 footer1.style.visibility = "hidden";
             } else {
                 hgroup4.style.opacity = "0";
@@ -249,7 +248,6 @@ observer = new IntersectionObserver ((entries) => {
 });
 
 observer.observe(rectangulo3);
-
 
 
 // About Me
@@ -273,14 +271,8 @@ observer = new IntersectionObserver ((entries) => {
                 footer1.style.visibility = "visible";
                 link_site3.style.opacity = "0";   
                 link_site3.style. transition = "1s ease-in-out";
-                //redesSociais.style.display = "none";
-                //redesSociais.style.animation = "opacity1 0s ease-in-out";
-                //redesSociaisFooter.style.opacity = "1";
-                //redesSociaisFooter.style.animation = "opacity1 1s ease-in-out ";
-                //redesSociaisFooter.style.animationPlayState = "running";
             } else {
                 footer1.style.visibility = "hidden";
-                //redesSociais.style.display = "flex";
             }
         }
         requestAnimationFrame(aboutme1);
