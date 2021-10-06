@@ -1701,6 +1701,10 @@ section {
 
 
 @media only screen and (max-width: 485px) and (max-width: 850px) {
+    #seta {
+        bottom: calc(50vh + 9px);
+    }
+
     #redes_sociaisfooter {
         width: auto;
         height: auto;
@@ -1798,6 +1802,10 @@ section {
 }
 
 @media only screen and (max-width: 850px) and (max-height: 450px) {
+    #seta {
+        bottom: calc(20vh + 9px);
+    }
+
     #folhas {
         opacity: 0;
         width: 0px;
