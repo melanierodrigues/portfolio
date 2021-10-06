@@ -71,7 +71,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(hello1);
-        requestFullscreen();
+        document.documentElement.requestFullscreen();
     })
 });
 
@@ -118,7 +118,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto1);
-        requestFullscreen();
+        document.documentElement.requestFullscreen();
     })
 });
 
@@ -188,7 +188,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto2);
-        requestFullscreen();
+        document.documentElement.requestFullscreen();
     })
 });
 
@@ -247,7 +247,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto3);
-        requestFullscreen();
+        document.documentElement.requestFullscreen();
     })
 });
 
@@ -280,7 +280,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(aboutme1);
-        requestFullscreen();
+        document.documentElement.requestFullscreen();
     })
 });
 

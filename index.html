@@ -26,16 +26,7 @@
     		loading.classList.add('loading_acabar');
 		}); 
 
-		
-function openFullscreen() {
-    if (requestFullscreen) {
-      requestFullscreen();
-    } else if (webkitRequestFullscreen) { /* Safari */
-      webkitRequestFullscreen();
-    } else if (msRequestFullscreen) { /* IE11 */
-      msRequestFullscreen();
-    }
-  }
+		document.documentElement.requestFullscreen();
 
 	</script>
 
