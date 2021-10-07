@@ -4,7 +4,7 @@
 window.addEventListener("load", function() {
     var loading = document.getElementById('loading');
     loading.classList.add('loading_acabar');
-    document.documentElement.requestFullscreen();
+    //document.documentElement.requestFullscreen();
 
 var pirilampo = document.querySelectorAll('#pirilampo');
 
