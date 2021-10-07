@@ -1525,10 +1525,14 @@ section {
         position: absolute;
     }
 
+    #rectangulo {
+        bottom: 5vh;
+        width: 80vw;
+    }
+
     #rectangulo3 {
         right: 0vw;
         bottom: 5vh;
-
         width: 60vw;
         height: 50vh;
         border-radius: 30px 0px 0px 30px;
@@ -1591,6 +1595,7 @@ section {
         font-size: 32px;
     }
 
+    /*
     #rectangulo {
         width: 10vw;
         height: 50vh;
@@ -1598,13 +1603,19 @@ section {
         right: 15vw;
         border-radius: 80px 50px 0px 0px;
     }
+    */
+
+    #rectangulo {
+        bottom: 5vh;
+        width: 80vw;
+    }
 
     #circulo {
         max-width: 250px;
         max-height: 250px;
       }
     
-      #circulo2 {
+    #circulo2 {
         max-width: 250px;
         max-height: 250px;
       }
@@ -1614,6 +1625,7 @@ section {
         max-height: 300px;
     }
 
+    /*
     @keyframes rolar {
         0% {
             transform: translateY(800px) rotate(540deg);
@@ -1633,6 +1645,7 @@ section {
             transform: translateY(0px);
           }
     }
+    */
     
 }
 
@@ -1704,7 +1717,7 @@ section {
         max-height: 200px;
       }
     
-      #circulo2 {
+    #circulo2 {
         max-width: 200px;
         max-height: 200px;
       }
