@@ -115,6 +115,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto1);
+        document.documentElement.requestFullscreen();
     })
 });
 observer.observe(rodas);
