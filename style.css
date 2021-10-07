@@ -264,7 +264,7 @@ section {
     display: flex;
     z-index: 5;
     background-color: var(--backgroungsectionhello);
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 
 #hgroup1 {
