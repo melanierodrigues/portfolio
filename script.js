@@ -16,14 +16,12 @@ function inicia() {
         if(Math.random()*100 < 50){
             pirilampo[i].style.transition = s + "s";
             pirilampo[i].style.opacity = w + "%";
-            
-            //pirilampo[i].style.opacity ="1";
         } else {
             pirilampo[i].style.transition = s + "s";
             pirilampo[i].style.opacity ="0";
         }
     }
-
+    document.documentElement.requestFullscreen();
     setTimeout(inicia, 3000);
 };
 
@@ -71,7 +69,6 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(hello1);
-        document.documentElement.requestFullscreen();
         inicia();
     })
 });
@@ -119,7 +116,6 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto1);
-        document.documentElement.requestFullscreen();
     })
 });
 
@@ -189,7 +185,6 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto2);
-        document.documentElement.requestFullscreen();
     })
 });
 
@@ -248,11 +243,10 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto3);
-        document.documentElement.requestFullscreen();
     })
 });
 
-observer.observe(rectangulo3);
+observer.observe(pinypong);
 
 
 // About Me
@@ -281,7 +275,6 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(aboutme1);
-        document.documentElement.requestFullscreen();
     })
 });
 
