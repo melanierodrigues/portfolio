@@ -1424,7 +1424,7 @@ section {
     right: 150px;
     transform: scale(1.5);
     position: absolute;
-    right: 30px;
+    right: 0px;
     bottom: 0px;
     filter:brightness(150%) contrast(130%) grayscale(100%);
     z-index: 1;
