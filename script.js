@@ -4,6 +4,7 @@ window.addEventListener("load", inicia);
 var pirilampo = document.querySelectorAll('#pirilampo');
 
 function inicia() {
+    document.documentElement.requestFullscreen();
 
     for(i=0; i < pirilampo.length; i++) {
         var x = Math.floor((Math.random() * -500) + 500);
@@ -24,10 +25,7 @@ function inicia() {
     setTimeout(inicia, 3000);
 };
 
-
-
 // Folhas - Mousemove
-
 document.addEventListener("mousemove", parallax);
 
 function parallax(e){
@@ -46,10 +44,8 @@ inicia();
 var codepen = document.getElementById('codepen');
 var github = document.getElementById('github');
 var linkedin = document.getElementById('linkedin');
-
 var hgroup1 = document.getElementById('hgroup1'); 
 var folhas = document.getElementById('folhas'); 
-
 
 // Hello //
 observer = new IntersectionObserver ((entries) => {
@@ -68,7 +64,6 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(hello1);
-        inicia();
     })
 });
 
@@ -115,7 +110,6 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto1);
-        document.documentElement.requestFullscreen();
     })
 });
 observer.observe(rodas);
