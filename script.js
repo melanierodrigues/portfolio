@@ -4,7 +4,6 @@ window.addEventListener("load", inicia);
 var pirilampo = document.querySelectorAll('#pirilampo');
 
 function inicia() {
-    document.documentElement.requestFullscreen();
 
     for(i=0; i < pirilampo.length; i++) {
         var x = Math.floor((Math.random() * -500) + 500);
@@ -86,7 +85,6 @@ observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function projecto1() {
-
             if(entry.intersectionRatio > 0) {
                 codepen.style.fill = "var(--corhgroug2)";
                 github.style.fill = "var(--corhgroug2)";
@@ -96,9 +94,9 @@ observer = new IntersectionObserver ((entries) => {
                 linkedin.style.stroke = "var(--corhgroug2)";
                 cronometro.style.animationPlayState = "running";
                 teste_cronometro.style.animationPlayState = "running";
-                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
-                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
-                numeros.style.animation = "texto2 2s linear 2s 2 both";
+                figureCronometro.style.animation = "rolar 0.6s ease-out 1.1s both";
+                cronometro.style.animation = "cronometro 1.6s 0.8s 4 both";
+                numeros.style.animation = "texto2 2s linear 2.5s 2 both";
                 risco.style.opacity = "1";
                 rectangulo.style.animation = "rec1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
                 hgroup2.style.opacity = "1";
@@ -110,9 +108,10 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto1);
+        document.documentElement.requestFullscreen();
     })
 });
-observer.observe(rodas);
+observer.observe(cronometro);
 
 
 
