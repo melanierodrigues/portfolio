@@ -3,7 +3,6 @@
 
 window.addEventListener("load", function() {
     var loading = document.getElementById('loading');
-    loading.classList.add('loading_acabar');
     //document.documentElement.requestFullscreen();
 
 var pirilampo = document.querySelectorAll('#pirilampo');
@@ -90,14 +89,6 @@ observer = new IntersectionObserver ((entries) => {
 
         function projecto1() {
             if(entry.intersectionRatio > 0) {
-                codepen.style.fill = "var(--corhgroug2)";
-                github.style.fill = "var(--corhgroug2)";
-                linkedin.style.fill = "var(--corhgroug2)";
-                codepen.style.stroke = "var(--corhgroug2)";
-                github.style.stroke = "var(--corhgroug2)";
-                linkedin.style.stroke = "var(--corhgroug2)";
-                cronometro.style.animationPlayState = "running";
-                teste_cronometro.style.animationPlayState = "running";
                 figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
                 cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
                 numeros.style.animation = "texto2 2s linear 2s 2 both";
@@ -107,11 +98,20 @@ observer = new IntersectionObserver ((entries) => {
                 hgroup2.style.animation = "opacity1 3s ease-in";
                 link_site.style.opacity = "1";
                 link_site.style.animation = "opacity1 5s ease-in";
+                cronometro.style.animationPlayState = "running";
+                teste_cronometro.style.animationPlayState = "running";
+                codepen.style.fill = "var(--corhgroug2)";
+                github.style.fill = "var(--corhgroug2)";
+                linkedin.style.fill = "var(--corhgroug2)";
+                codepen.style.stroke = "var(--corhgroug2)";
+                github.style.stroke = "var(--corhgroug2)";
+                linkedin.style.stroke = "var(--corhgroug2)";
             } else {
                 risco.style.opacity = "0";
             }
         }
         requestAnimationFrame(projecto1);
+        document.documentElement.requestFullscreen();
     })
 });
 observer.observe(cronometro);
@@ -267,4 +267,6 @@ observer = new IntersectionObserver ((entries) => {
 observer.observe(foto);
 
 
+
+loading.classList.add('loading_acabar');
 }); 

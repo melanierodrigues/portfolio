@@ -264,7 +264,7 @@ section {
     display: flex;
     z-index: 5;
     background-color: var(--backgroungsectionhello);
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 #hgroup1 {
@@ -476,7 +476,7 @@ section {
 
 /* -------------------------------- Projecto 1 -------------------------------------- */
 .project1 {
-    scroll-snap-align: center;
+    scroll-snap-align: end;
     grid-template-columns: 10vw 1fr 1fr 10vw;
     grid-column-gap: 4vw;
     align-items: center;
