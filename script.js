@@ -1,5 +1,6 @@
 // Pirilampos - Random 
 window.addEventListener("load", inicia);
+document.documentElement.requestFullscreen();
 
 var pirilampo = document.querySelectorAll('#pirilampo');
 
@@ -80,7 +81,7 @@ var link_site = document.getElementById('link_site');
 var teste_cronometro = document.getElementById('teste_cronometro'); 
 var rodas = document.getElementById('rodas');
 
-/* observer = new IntersectionObserver ((entries) => {
+observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function projecto1() {
@@ -107,10 +108,9 @@ var rodas = document.getElementById('rodas');
             }
         }
         requestAnimationFrame(projecto1);
-        //document.documentElement.requestFullscreen();
     })
 });
-observer.observe(cronometro); */
+observer.observe(cronometro);
 
 
 // Scroll Paralax - Project 2
