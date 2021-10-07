@@ -72,6 +72,7 @@ observer = new IntersectionObserver ((entries) => {
         }
         requestAnimationFrame(hello1);
         document.documentElement.requestFullscreen();
+        inicia();
     })
 });
 
