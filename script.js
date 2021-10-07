@@ -59,7 +59,6 @@ observer = new IntersectionObserver ((entries) => {
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
                 hgroup2.style.opacity = "0"; 
-            } else {
             }
         }
         requestAnimationFrame(hello1);
@@ -81,7 +80,7 @@ var link_site = document.getElementById('link_site');
 var teste_cronometro = document.getElementById('teste_cronometro'); 
 var rodas = document.getElementById('rodas');
 
-observer = new IntersectionObserver ((entries) => {
+/* observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function projecto1() {
@@ -109,12 +108,9 @@ observer = new IntersectionObserver ((entries) => {
         }
         requestAnimationFrame(projecto1);
         //document.documentElement.requestFullscreen();
-        document.fullscreenElement;
     })
 });
-observer.observe(cronometro);
-
-
+observer.observe(cronometro); */
 
 
 // Scroll Paralax - Project 2
@@ -173,16 +169,12 @@ observer = new IntersectionObserver ((entries) => {
                 risco2.style.animationPlayState = "running";
                 link_site.style.opacity = "0";   
                 link_site.style. transition = "0.8s ease-in-out";
-              
-            } else {
             }
         }
         requestAnimationFrame(projecto2);
     })
 });
-
 observer.observe(calculadora);
-
 
 // Scroll Paralax - Project 3
 var project3 = document.getElementsByClassName('project3');
@@ -238,9 +230,7 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(projecto3);
     })
 });
-
 observer.observe(pinypong);
-
 
 // About Me
 var foto = document.getElementById('foto');
@@ -270,5 +260,4 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(aboutme1);
     })
 });
-
 observer.observe(foto);
