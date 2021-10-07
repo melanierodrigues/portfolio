@@ -1,6 +1,5 @@
 // Pirilampos - Random 
 window.addEventListener("load", inicia);
-document.documentElement.requestFullscreen();
 
 var pirilampo = document.querySelectorAll('#pirilampo');
 
@@ -108,6 +107,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto1);
+        document.documentElement.requestFullscreen();
     })
 });
 observer.observe(cronometro);
