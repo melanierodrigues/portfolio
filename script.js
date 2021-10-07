@@ -21,7 +21,6 @@ function inicia() {
             pirilampo[i].style.opacity ="0";
         }
     }
-    document.documentElement.requestFullscreen();
     setTimeout(inicia, 3000);
 };
 
@@ -118,7 +117,6 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(projecto1);
     })
 });
-
 observer.observe(rodas);
 
 
