@@ -1,16 +1,12 @@
 @font-face {
     font-family: "Nunito-Black";
     src: url("Fonts/Nunito-Black.ttf");
-
     font-family: "Nunito-Bold";
     src: url("Fonts/Nunito-Bold.ttf");
-
     font-family: "Nunito-Light";
     src: url("Fonts/Nunito-Light.ttf");
-
     font-family: "Nunito-Regular";
     src: url("Fonts/Nunito-Regular.ttf");
-
 }
 
 :root {
@@ -19,7 +15,6 @@
     --fontbold: 'Nunito-Bold', sans-serif;
     --fontlight: 'Nunito-Light', sans-serif;
     --fontregular: 'Nunito-Regular', sans-serif;
-
     --cor1: rgb(255, 255, 255); 
     --cor2: #000C1E;
     --cor3: #cf5f5f;                        
@@ -27,25 +22,21 @@
     --corsubtitulo: rgba(255, 255, 255, 0.473);
     --corsubsubtitulo: rgba(255, 255, 255, 0.219);
     --backgroungsectionhello: #cf5f5f00;
-
     --corproject1: #eaf0fd;
     --corhgroug2: #180e8c;
     --corriscosectionproject1: rgba(102, 163, 255, 0.336);
     --correctanguloprojecto1:  #BCD1FB;
     --corlink_siteproject1: rgba(255, 255, 255, 0.815);
-
     --corproject2:  rgb(255, 220, 137);
     --corhgroug3: rgb(134, 100, 19);
     --corriscosectionproject2: rgba(150, 117, 40, 0.336);
     --correctanguloprojecto2:  #fdcf64;
     --corlink_siteproject2: #fdcf64;  
-
     --corproject3:  #F7D5E3;
     --corhgroug4: rgb(110, 110, 110);
     --corriscosectionproject3: rgba(110, 110, 110, 0.336);
     --correctanguloprojecto3:  #BDE6D9;
     --corlink_siteproject3: #fde7f1;
-
     --coraboutme: #cf5f5f00;
     --corhgroug5: #cf5f5f;  
     --corfooter: #7a4d4d;
@@ -115,7 +106,6 @@ h1 {
 h2 {
     font-size: 48px;
     font-family: var(--fontbold);
-
 }
 
 h3 {
@@ -137,11 +127,16 @@ section {
     width: 100vw;
     height: 100vh;
     margin: auto;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     background-color: var(--backgroungsectionhello);
+    -webkit-transform-style: initial;
+    transform-style: preserve-3d;
+    -moz-transform-style: initial;
+    -moz-transform-style: inherit;
+    transform: rotateY(0deg);
 }
 
 /* -------------------------------- Loading -------------------------------------- */ 
@@ -197,7 +192,6 @@ section {
       opacity: 1;
     }
   }
-  
 
 @keyframes bolaanimada {
     2% {
@@ -267,12 +261,10 @@ section {
 
 /* -------------------------------- Hello Section -------------------------------------- */
 .hello {
+    display: flex;
     z-index: 5;
     background-color: var(--backgroungsectionhello);
-    scroll-snap-align: start;
-    -webkit-transform-style: initial;
-    transform-style: preserve-3d;
-    -moz-transform-style: initial;
+    scroll-snap-align: center;
 }
 
 #hgroup1 {
@@ -484,22 +476,13 @@ section {
 
 /* -------------------------------- Projecto 1 -------------------------------------- */
 .project1 {
-    scroll-snap-align: end;
-    width: 100vw;
-    height: 100vh;
-    display: grid;
+    scroll-snap-align: center;
     grid-template-columns: 10vw 1fr 1fr 10vw;
     grid-column-gap: 4vw;
     align-items: center;
     background-color: var(--corproject1);
     position: sticky;
     z-index: 4;
-
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-
-    -moz-transform-style: inherit;
-    transform: rotateY(0deg);
 }
 
 #hgroup2 {
@@ -563,7 +546,6 @@ section {
 #cronometro {
     width: 100%;
     height: 100%;
-    /* animation: cronometro 0.8s 2s 4 both; */
     transition: 0.5s ease-in;
     opacity: 1; 
     animation-play-state: paused;  
@@ -815,9 +797,6 @@ section {
 
 /* -------------------------------- Projecto 2 -------------------------------------- */
 .project2 {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
     grid-template-columns: 10vw 1fr 1fr 10vw;
     grid-column-gap: 4vw;
     align-items: center;
@@ -825,21 +804,7 @@ section {
     position: sticky;
     scroll-snap-align: end;
     z-index: 3;
-
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-
-    -moz-transform-style: inherit;
-    transform: rotateY(0deg);
 }
-
-/*
-#espaço_imagem2 {
-    z-index: 4;
-    display: flex;
-    justify-content: center;
-}
-*/
 
 #hgroup3 {
     color: var(--corhgroug3);
@@ -902,7 +867,6 @@ section {
     animation: mm 1s infinite;
     position: absolute;
     transform: translateY(-1500px);
-    /* animation-fill-mode: forwards; */
     animation-play-state: paused;
     transition: 0.5s ease-in-out;
 }
@@ -961,7 +925,6 @@ section {
     animation-delay: 5s;
     animation-duration: 3.1s;
 }
-
 
 #rectangulo2 {
     width: 50vw;
@@ -1107,12 +1070,8 @@ section {
 
 /* -------------------------------- END - Projecto 2 -------------------------------------- */
 
-
 /* -------------------------------- Projecto 3 -------------------------------------- */
 .project3 {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
     grid-template-columns: 10vw 1fr 1fr 10vw;
     grid-column-gap: 4vw;
     align-items: center;
@@ -1120,18 +1079,7 @@ section {
     position: sticky;
     scroll-snap-align: end;
     z-index: 4;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -moz-transform-style: inherit;
-    transform: rotateY(0deg);
 }
-
-/*
-#espaço_imagem3 {
-    z-index: 2;
-    left: 50vw;
-}
-*/
 
 #hgroup4 {
     color: var(--corhgroug4);
@@ -1367,19 +1315,11 @@ section {
 
 /* -------------------------------- About Me -------------------------------------- */
 .aboutme {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
     grid-template-columns: 10vw 1fr 1fr 10vw;
     grid-column-gap: 4vw;
     align-items: center;
     background-color: var(--coraboutme);
     scroll-snap-align: center;
-    z-index: 1;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -moz-transform-style: inherit;
-    transform: rotateY(0deg);
 }
 
 #hgroup5 {
@@ -1421,13 +1361,11 @@ section {
 #foto {
     width: auto;
     height: 350px;
-    right: 150px;
     transform: scale(1.5);
     position: absolute;
     right: 0px;
     bottom: 0px;
     filter:brightness(150%) contrast(130%) grayscale(100%);
-    z-index: 1;
 }
 
 /* -------------------------------- END - About Me -------------------------------------- */
@@ -1445,7 +1383,6 @@ section {
 /* -------------------------------- Media Screen -------------------------------------- */
 
 @media screen and (max-width: 1200px) {
-
     #folhas {
         width: auto;
         height: auto;
