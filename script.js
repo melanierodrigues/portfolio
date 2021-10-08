@@ -61,7 +61,7 @@ observer = new IntersectionObserver ((entries) => {
                 codepen.style.stroke = "var(--cor3)";
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
-                hgroup2.style.opacity = "0"; 
+                //hgroup2.style.opacity = "0"; 
             }
         }
         requestAnimationFrame(hello1);
@@ -110,6 +110,7 @@ observer = new IntersectionObserver ((entries) => {
                 linkedin.style.stroke = "var(--corhgroug2)";
             } else {
                 risco.style.opacity = "0";
+                hgroup2.style.opacity = "0"; 
             }
         }
         requestAnimationFrame(projecto1);
