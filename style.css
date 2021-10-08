@@ -1559,6 +1559,10 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+    #rectangulo3 {
+        width: 45vw;
+    }
+
     #calculadora {
         top: 80vw;
         position: absolute;
