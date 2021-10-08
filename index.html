@@ -14,7 +14,7 @@
     <meta property="og:image" content="https://ibb.co/31hrYcb">
 
     <link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
+	<script async src="script.js"></script>
     <title>Mélanie Rodrigues</title>
 </head>
 
@@ -1207,6 +1207,51 @@
    </g>
             </svg>
         </figure>
+
+		<script>
+//  Scroll Paralax - Project 1 // // Cronometro // // 
+var project1 = document.getElementsByClassName('project1');
+var cronometro = document.getElementById('cronometro'); 
+var figureCronometro = document.getElementById('figure_cronometro');
+var numeros = document.getElementById('numeros');
+var hgroup2 = document.getElementById('hgroup2'); 
+var rectangulo = document.getElementById('rectangulo'); 
+var risco = document.getElementById('risco');
+var link_site = document.getElementById('link_site'); 
+var teste_cronometro = document.getElementById('teste_cronometro'); 
+var rodas = document.getElementById('rodas');
+
+observer = new IntersectionObserver ((entries) => {
+    entries.forEach(entry => {
+
+        function projecto1() {
+            if(entry.intersectionRatio > 0) {
+                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
+                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
+                numeros.style.animation = "texto2 2s linear 2s 2 both";
+                rectangulo.style.animation = "rec1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+                risco.style.opacity = "1";
+                hgroup2.style.opacity = "1";
+                hgroup2.style.animation = "opacity1 3s ease-in";
+                link_site.style.opacity = "1";
+                link_site.style.animation = "opacity1 5s ease-in";
+                cronometro.style.animationPlayState = "running";
+                teste_cronometro.style.animationPlayState = "running";
+                codepen.style.fill = "var(--corhgroug2)";
+                github.style.fill = "var(--corhgroug2)";
+                linkedin.style.fill = "var(--corhgroug2)";
+                codepen.style.stroke = "var(--corhgroug2)";
+                github.style.stroke = "var(--corhgroug2)";
+                linkedin.style.stroke = "var(--corhgroug2)";
+            } else {
+                risco.style.opacity = "0";
+            }
+        }
+        requestAnimationFrame(projecto1);
+    })
+});
+observer.observe(cronometro);
+		</script>
 
     <section class="project1">
         <hgroup id="hgroup2">
