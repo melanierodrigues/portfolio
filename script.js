@@ -63,10 +63,6 @@ observer = new IntersectionObserver ((entries) => {
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
                 hgroup2.style.opacity = "0"; 
-
-                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
-                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
-                numeros.style.animation = "texto2 2s linear 2s 2 both";
             }
         }
         requestAnimationFrame(hello1);
@@ -75,7 +71,7 @@ observer = new IntersectionObserver ((entries) => {
 
 observer.observe(hgroup1);
 
-
+/*
 //  Scroll Paralax - Project 1 // // Cronometro // // 
 var project1 = document.getElementsByClassName('project1');
 var cronometro = document.getElementById('cronometro'); 
@@ -93,9 +89,9 @@ observer = new IntersectionObserver ((entries) => {
 
         function projecto1() {
             if(entry.intersectionRatio > 0) {
-                //figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
-                //cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
-               // numeros.style.animation = "texto2 2s linear 2s 2 both";
+                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
+                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
+                numeros.style.animation = "texto2 2s linear 2s 2 both";
                 rectangulo.style.animation = "rec1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
                 risco.style.opacity = "1";
                 hgroup2.style.opacity = "1";
@@ -118,7 +114,7 @@ observer = new IntersectionObserver ((entries) => {
     })
 });
 observer.observe(cronometro);
-
+*/
 
 // Scroll Paralax - Project 2
 var project2 = document.getElementsByClassName('project2');
