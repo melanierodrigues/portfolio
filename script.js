@@ -66,6 +66,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(hello1);
+        document.documentElement.requestFullscreen();
     })
 });
 
@@ -175,7 +176,6 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(projecto2);
-        document.documentElement.requestFullscreen();
     })
 });
 observer.observe(rectangulo2);
