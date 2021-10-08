@@ -94,6 +94,7 @@ observer = new IntersectionObserver ((entries) => {
                 //numeros.style.animation = "texto2 2s linear 4.2s 2 both";
                 numeros.style.animation = "texto2 5s linear 3s 1 both";
                 rectangulo.style.animation = "rec1 0.8s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+                cronometro.style.opacity = "1";
                 risco.style.opacity = "1";
                 hgroup2.style.opacity = "1";
                 hgroup2.style.animation = "opacity1 2s ease-in";
@@ -234,7 +235,7 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(projecto3);
     })
 });
-observer.observe(rectangulo3);
+observer.observe(link_site3);
 
 // About Me
 var foto = document.getElementById('foto');
