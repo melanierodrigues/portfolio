@@ -114,7 +114,7 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(projecto1);
     })
 });
-observer.observe(cronometro);
+observer.observe(link_site);
 
 // Scroll Paralax - Project 2
 var project2 = document.getElementsByClassName('project2');
