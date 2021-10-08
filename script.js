@@ -3,7 +3,6 @@
 
 window.addEventListener("load", function() {
     var loading = document.getElementById('loading');
-    //document.documentElement.requestFullscreen();
 
 var pirilampo = document.querySelectorAll('#pirilampo');
 
@@ -90,9 +89,9 @@ observer = new IntersectionObserver ((entries) => {
 
         function projecto1() {
             if(entry.intersectionRatio > 0) {
-                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
-                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
-                numeros.style.animation = "texto2 2s linear 2s 2 both";
+                figureCronometro.style.animation = "rolar 0.6s ease-out 1.3s both";
+                cronometro.style.animation = "cronometro 0.8s 1.8s 4 both";
+                numeros.style.animation = "texto2 2s linear 3s 2 both";
                 rectangulo.style.animation = "rec1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
                 risco.style.opacity = "1";
                 hgroup2.style.opacity = "1";
