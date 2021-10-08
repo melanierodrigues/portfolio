@@ -63,6 +63,10 @@ observer = new IntersectionObserver ((entries) => {
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
                 hgroup2.style.opacity = "0"; 
+
+                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
+                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
+                numeros.style.animation = "texto2 2s linear 2s 2 both";
             }
         }
         requestAnimationFrame(hello1);
@@ -89,11 +93,11 @@ observer = new IntersectionObserver ((entries) => {
 
         function projecto1() {
             if(entry.intersectionRatio > 0) {
-                figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
-                cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
-                numeros.style.animation = "texto2 2s linear 2s 2 both";
-                risco.style.opacity = "1";
+                //figureCronometro.style.animation = "rolar 0.6s ease-out 0.3s both";
+                //cronometro.style.animation = "cronometro 0.8s 0.8s 4 both";
+               // numeros.style.animation = "texto2 2s linear 2s 2 both";
                 rectangulo.style.animation = "rec1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+                risco.style.opacity = "1";
                 hgroup2.style.opacity = "1";
                 hgroup2.style.animation = "opacity1 3s ease-in";
                 link_site.style.opacity = "1";
@@ -163,9 +167,9 @@ observer = new IntersectionObserver ((entries) => {
                 mm10.style.animationPlayState = "running";
                 mm11.style.animationPlayState = "running";
                 risco2.style.opacity = "1";
+                link_site2.style.opacity = "1";
                 rectangulo2.style.animation = "rec1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both";
                 calculadora.style.animation = "calculadora 5s ease-out 0.8s both";
-                link_site2.style.opacity = "1";
                 link_site2.style.animation = "opacity1 5s ease-in";
                 rectangulo2.style.animationPlayState = "running";
                 calculadora.style.animationPlayState = "running";
