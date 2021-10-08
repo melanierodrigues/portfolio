@@ -476,7 +476,7 @@ section {
 
 /* -------------------------------- Projecto 1 -------------------------------------- */
 .project1 {
-    scroll-snap-align: end;
+    scroll-snap-align: center;
     grid-template-columns: 10vw 1fr 1fr 10vw;
     grid-column-gap: 4vw;
     align-items: center;
@@ -841,7 +841,7 @@ section {
     animation-play-state: paused;  
     justify-content: center;
     transition: 0.5s ease-in;
-    opacity: 1; 
+    opacity: 0; 
     animation-play-state: paused;  
     z-index: 1;
 }
@@ -1077,7 +1077,7 @@ section {
     align-items: center;
     background-color: var(--corproject3);
     position: sticky;
-    scroll-snap-align: end;
+    scroll-snap-align: start;
     z-index: 4;
 }
 
