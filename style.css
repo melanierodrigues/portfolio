@@ -1608,6 +1608,7 @@ section {
     #rectangulo {
         bottom: 5vh;
         width: 80vw;
+        height: 15vw;
     }
 
     #circulo {
