@@ -71,7 +71,7 @@ observer = new IntersectionObserver ((entries) => {
 
 observer.observe(hgroup1);
 
-/*
+
 //  Scroll Paralax - Project 1 // // Cronometro // // 
 var project1 = document.getElementsByClassName('project1');
 var cronometro = document.getElementById('cronometro'); 
@@ -114,7 +114,6 @@ observer = new IntersectionObserver ((entries) => {
     })
 });
 observer.observe(cronometro);
-*/
 
 // Scroll Paralax - Project 2
 var project2 = document.getElementsByClassName('project2');
@@ -165,6 +164,7 @@ observer = new IntersectionObserver ((entries) => {
                 risco2.style.opacity = "1";
                 link_site2.style.opacity = "1";
                 rectangulo2.style.animation = "rec1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both";
+                calculadora.style.opacity = "1";
                 calculadora.style.animation = "calculadora 5s ease-out 0.8s both";
                 link_site2.style.animation = "opacity1 5s ease-in";
                 rectangulo2.style.animationPlayState = "running";
@@ -178,7 +178,7 @@ observer = new IntersectionObserver ((entries) => {
         document.documentElement.requestFullscreen();
     })
 });
-observer.observe(calculadora);
+observer.observe(rectangulo2);
 
 // Scroll Paralax - Project 3
 var project3 = document.getElementsByClassName('project3');
@@ -234,7 +234,7 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(projecto3);
     })
 });
-observer.observe(pinypong);
+observer.observe(rectangulo3);
 
 // About Me
 var foto = document.getElementById('foto');
