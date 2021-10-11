@@ -1340,7 +1340,7 @@ section {
     opacity: 1;
     border: 1px solid var(--corhgroug5);
     background-color: none;
-    display:inline-block;
+    display: inline-block;
     margin-top: 5vh;
 }
 
@@ -1649,6 +1649,11 @@ section {
         max-height: 300px;
     }
 
+    #link_site4 {
+        left: 0vw;
+        top: -8vh;
+    }
+
     /*
     @keyframes rolar {
         0% {
@@ -1680,15 +1685,45 @@ section {
         opacity: 0.1;
     }
 
+    /* AQUI 
+            display: grid;
+        grid-template-columns:  10vw 1fr 10vw  ;
+        grid-template-rows: auto  1fr  1fr auto ;
+        grid-auto-flow: column dense;
+        grid-column-gap: 5vw;
+        align-items: center;
+        grid-row-gap: 5vw;
+
+
+        
+    .aboutme {
+        display: grid;
+        grid-template-columns:  7vw 1fr 7vw  ;
+        grid-template-rows: auto  1fr  1fr auto ;
+        grid-column-gap: 5vw;
+        grid-row-gap: 14vw;
+    }
+    */
+    .aboutme {
+        display: grid;
+        grid-template-columns:  10vw 1fr 10vw  ;
+        grid-template-rows: auto  1fr  1fr auto ;
+        grid-auto-flow: column dense;
+        grid-column-gap: 0vw;
+        align-items: center;
+        grid-row-gap: 5vw;
+    }
+
     #redes_sociaisfooter {
         width: auto;
         height: auto;
         grid-column: 2;
         margin-top: 20px;
         margin-left: -10px;
-        animation-play-state: paused;
         opacity: 1;
         display: flex;
+        margin-top: -2.5vh;
+        margin-left: 110px;
     }
     
     #redes_sociaisfooter a {
@@ -1696,15 +1731,17 @@ section {
         list-style-type: none;
         text-decoration: none;
         position: relative;
+        display: inline-flex;
+        margin-top: -10vh;
     }
     
     #codepenfooter, #githubfooter, #linkedinfooter {
-        padding: 10px;
+        padding: 8px;
         stroke-width: 0.5px;
         fill: var(--corfooter);
         stroke: var(--corfooter);
-        width: 60px;
-        height: 60px;
+        width: 51px;
+        height: 51px;
         transition: 0.3s ease-in-out;
     }
     
@@ -1725,14 +1762,6 @@ section {
         grid-auto-flow: column dense;
         grid-column-gap: 5vw;
         align-items: center;
-        grid-row-gap: 14vw;
-    }
-
-    .aboutme {
-        display: grid;
-        grid-template-columns:  7vw 1fr 7vw  ;
-        grid-template-rows: auto  1fr  1fr auto ;
-        grid-column-gap: 5vw;
         grid-row-gap: 14vw;
     }
 
@@ -1769,14 +1798,17 @@ section {
     }
 
     #link_site4 {
-        left: 0vw;
-        top: -8vh;
+        margin-top: 5vh;
     }
 
     #uni {
         top: auto;
         bottom: 5vh;
         left: 5vw;
+    }
+
+    footer p {
+        font-size: 12px;
     }
 
 }
