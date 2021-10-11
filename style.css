@@ -1331,6 +1331,25 @@ section {
     opacity: 1;
 }
 
+#link_site4 {
+    padding: 16px;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: var(--corhgroug5);
+    cursor: pointer;
+    opacity: 1;
+    border: 1px solid var(--corhgroug5);
+    background-color: none;
+    display:inline-block;
+    margin-top: 5vh;
+}
+
+#link_site4:hover {
+    background-color: var(--corhgroug5);
+    color: var(--cor2);
+}
+
+
 #redes_sociaisfooter {
     display: none;
 }
@@ -1425,7 +1444,7 @@ section {
 
 @media screen and (max-width: 1150px) {
 
-    #link_site, #link_site2, #link_site3, #link_site4 {
+    #link_site, #link_site2, #link_site3 {
         left: 8.5vw;
     }
 
@@ -1472,7 +1491,7 @@ section {
         grid-row: 2;
     }
 
-    #link_site, #link_site2, #link_site3, #link_site4 {
+    #link_site, #link_site2, #link_site3 {
         top: -8vh;
         left: 15vw;
     }
@@ -1744,9 +1763,14 @@ section {
 
     }
 
-    #link_site, #link_site2, #link_site3, #link_site4 {
+    #link_site, #link_site2, #link_site3 {
         top: 0vh;
         left: 12vw;
+    }
+
+    #link_site4 {
+        left: 0vw;
+        top: -8vh;
     }
 
     #uni {
@@ -1778,7 +1802,7 @@ section {
         margin-top: 10vh;
     }
 
-    #link_site, #link_site2, #link_site3, #link_site4 {
+    #link_site, #link_site2, #link_site3 {
         margin-top: 50px;
         left: 14.8vw;
         top: 23vh;
