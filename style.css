@@ -1507,7 +1507,8 @@ section {
     }
 
     #cronometro {
-        max-height: 320px;
+        max-height: 280px;
+        margin-top: -5vh;
     }
 
     #espaço_imagem, #espaço_imagem2, #espaço_imagem3, #espaço_imagem4, #espaço_imagem5 {
@@ -1683,7 +1684,6 @@ section {
     html, body, .hello, .project1, .project2, .project3, .aboutme { margin:0; height: 100%;}
 
     section {
-        /*height: calc(var(--vh, 1vh) * 100);*/
         height: calc(100vh - 80px);
     }
 
