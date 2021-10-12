@@ -266,7 +266,7 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(aboutme1);
     })
 });
-observer.observe(foto);
+observer.observe(footer1);
 
 
 
