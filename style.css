@@ -80,6 +80,7 @@ body {
     overscroll-behavior: contain;
 }
 
+
 header {
     display: none;
 }
@@ -1679,34 +1680,20 @@ section {
 
 
 @media only screen and (max-width: 485px) and (max-width: 850px) {
-    body {
-        height: calc(100vh - 80px);
+    main {
+        height: calc(100vh + 100px);
     }
+    
+    main {
+        padding-bottom: 100px;
+    }
+
 
     #seta {
         bottom: calc(50vh + 9px);
         opacity: 0.1;
     }
 
-    /* AQUI 
-            display: grid;
-        grid-template-columns:  10vw 1fr 10vw  ;
-        grid-template-rows: auto  1fr  1fr auto ;
-        grid-auto-flow: column dense;
-        grid-column-gap: 5vw;
-        align-items: center;
-        grid-row-gap: 5vw;
-
-
-        
-    .aboutme {
-        display: grid;
-        grid-template-columns:  7vw 1fr 7vw  ;
-        grid-template-rows: auto  1fr  1fr auto ;
-        grid-column-gap: 5vw;
-        grid-row-gap: 14vw;
-    }
-    */
     .aboutme {
         display: grid;
         grid-template-columns:  10vw 1fr 10vw  ;
