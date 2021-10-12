@@ -80,6 +80,9 @@ body {
     overscroll-behavior: contain;
 }
 
+html { height: 100vh; }
+body { height: 100%; }
+
 header {
     display: none;
 }
