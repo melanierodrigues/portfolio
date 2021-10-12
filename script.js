@@ -4,10 +4,10 @@
 window.addEventListener("load", function() {
 
 // Altura da viewport multiplicada por 1% para obter um valor para vh
-let vh = document.innerHeight * 0.01;
+let vh = (window.innerHeight * 0.01);
  
 // Configura o valor em --vh na raiz do documento
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+document.documentElement.style.setProperty('--vh', `${vh}px - 80px`);
 
 
     var loading = document.getElementById('loading');
