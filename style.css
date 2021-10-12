@@ -71,11 +71,10 @@
 body {
     background-color: var(--cor2);
     color: var(--cor1);
-    /* cursor: url(Cursor.cur) 4 12, pointer; */
+    cursor: url(CursorA-01.png) 4 12, default;
     overflow: hidden;
-    /* scroll-behavior: smooth; */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
     display: flex;
     flex-direction: column;
     overscroll-behavior: contain;
@@ -469,7 +468,7 @@ section {
 #codepen:hover, #github:hover, #linkedin:hover {
     stroke: var(--corhgroug2);
     transform: scale(1.2);
-    /* cursor: url(Cursor2.cur) 4 12, pointer; */
+    cursor: url(CursorB-01.png) 4 12, pointer;
 }
 /* -------------------------------- END - Social Media -------------------------------------- */
 
@@ -524,7 +523,7 @@ section {
     letter-spacing: 0.1em;
     color: var(--corhgroug2);
     text-decoration: none;
-    cursor: pointer;
+    cursor: url(CursorB-01.png) 4 12, pointer;
     opacity: 1;;
     border: 1px solid var(--corhgroug2);
     margin-top: 32px;
@@ -949,7 +948,7 @@ section {
     text-decoration: none;
     letter-spacing: 0.1em;
     color: var(--corhgroug3);
-    cursor: pointer;
+    cursor: url(CursorB-01.png) 4 12, pointer;
     opacity: 1;
     border: 1px solid var(--corhgroug3);
     background-color: var(--corlink_siteproject2);
@@ -1156,7 +1155,7 @@ section {
     text-decoration: none;
     letter-spacing: 0.1em;
     color: var(--corhgroug4);
-    cursor: pointer;
+    cursor: url(CursorB-01.png) 4 12, pointer;
     opacity: 1;
     border: 1px solid var(--corhgroug4);
     background-color: var(--corlink_siteproject3);
@@ -1336,7 +1335,7 @@ section {
     text-decoration: none;
     letter-spacing: 0.1em;
     color: var(--corhgroug5);
-    cursor: pointer;
+    cursor: url(CursorB-01.png) 4 12, pointer;
     opacity: 1;
     border: 1px solid var(--corhgroug5);
     background-color: none;
@@ -1753,7 +1752,7 @@ section {
     #codepenfooter:hover, #githubfooter:hover, #linkedinfooter:hover {
         stroke: var(--cor3);
         transform: scale(1.2);
-        /* cursor: url(Cursor2.cur) 4 12, pointer; */
+        cursor: url(CursorB-01.png) 4 12, pointer;
     }
 
     #redes_sociais {
