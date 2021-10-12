@@ -1680,10 +1680,10 @@ section {
 
 
 @media only screen and (max-width: 485px) and (max-width: 850px) {
-    main {
-        height: 100vh;
+    section {
         /*height: calc(var(--vh, 1vh) * 100);*/
-        height: calc(100vh - 80px);
+        /*height: calc(100vh - 80px);*/
+        padding-bottom: 80px;
     }
 
 
