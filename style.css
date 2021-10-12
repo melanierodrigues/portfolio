@@ -1893,6 +1893,7 @@ section {
 
     #circulo {
         opacity: 0;
+        display: none;
     }
 
     footer p {
