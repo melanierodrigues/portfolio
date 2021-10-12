@@ -1619,16 +1619,6 @@ section {
         font-size: 32px;
     }
 
-    /*
-    #rectangulo {
-        width: 10vw;
-        height: 50vh;
-        bottom: 0;
-        right: 15vw;
-        border-radius: 80px 50px 0px 0px;
-    }
-    */
-
     #rectangulo {
         bottom: 5vh;
         width: 80vw;
@@ -1654,29 +1644,6 @@ section {
         left: 0vw;
         top: -8vh;
     }
-
-    /*
-    @keyframes rolar {
-        0% {
-            transform: translateY(800px) rotate(540deg);
-            opacity: 0;
-          }
-          100% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 1;
-          }
-      }
-
-      @keyframes rec1 {
-        0% {
-            transform: translateY(5000px);
-          }
-          100% {
-            transform: translateY(0px);
-          }
-    }
-    */
-    
 }
 
 
@@ -1818,7 +1785,7 @@ section {
     }
 
     #seta {
-        bottom: calc(20vh + 9px);
+        bottom: calc(10vh + 9px);
         opacity: 0.1;
     }
 
@@ -1855,8 +1822,8 @@ section {
         width: auto;
         height: 150px; 
         transition: none;
-        left: 50vw;
-        bottom: -10vh;
+        left: 55vw;
+        bottom: 0vh;
         position: absolute;
     }
 
@@ -1867,6 +1834,10 @@ section {
         left: 75vw;
         bottom: 5vh;
         position: absolute;
+    }
+
+    #rectangulo{
+        width: 40vw;
     }
 
     #rectangulo, #rectangulo2 {
