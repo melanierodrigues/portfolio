@@ -1680,7 +1680,7 @@ section {
 
 @media only screen and (max-width: 485px) and (max-width: 850px) {
     body {
-        height: calc (100% + 40px);
+        height: calc(100% + 40px);
     }
 
     #seta {
