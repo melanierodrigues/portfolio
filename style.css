@@ -1807,31 +1807,21 @@ section {
     #link_site, #link_site2, #link_site3 {
         margin-top: 50px;
         left: 14.8vw;
-        top: 23vh;
+        /*top: 23vh;*/
+        top: auto;
+        bottom: -30vh;
     }
 
     #pinypong {
         opacity: 0;
     }
-    /*
-
-        #cronometro {
-        width: auto;
-        height: 150px; 
-        transition: none;
-        left: 55vw;
-        bottom: 0vh;
-        position: absolute;
-    }
-
-    */
 
     #cronometro {
-        height: 150px; 
+        height: 100px; 
         transition: none;
-        top: calc(100% - 280px);
+        bottom: 50vh;
         left: auto;
-        right: -30vw;
+        right: -35vw;
         position: absolute;
     }
 
@@ -1846,6 +1836,28 @@ section {
         }
       }
 
+      @keyframes cronometro2 {
+        0% {
+            transform: translateX(0%);
+            transform-origin: 50% 50%;
+        }
+        1% {
+          transform: translate(-30px);
+        }
+        10% {
+          transform: translate(15px);
+        }
+        20% {
+          transform: translate(-15px);
+        }
+        30% {
+          transform: translate(9px);
+        }
+        40% {
+          transform: translate(-6px);
+        }
+      }
+
     #calculadora {
         width: auto;
         height: 200px; 
@@ -1855,16 +1867,16 @@ section {
         position: absolute;
     }
 
-    #rectangulo{
-        width: 40vw;
-    }
-
-    #rectangulo, #rectangulo2 {
-        bottom: 0vh;
+    #rectangulo {
+        opacity: 0;
+        height: 20vh;
+        width: 30vw;
+        bottom: 60vh;
     }
 
     #rectangulo2 {
         width: 40vw;
+        bottom: 0vh;
     }
 
     #rectangulo3 {

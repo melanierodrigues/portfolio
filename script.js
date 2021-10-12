@@ -88,19 +88,20 @@ observer = new IntersectionObserver ((entries) => {
 
         function projecto1() {
             if(entry.intersectionRatio > 0) {
+                rectangulo.style.opacity = "1";
+                rectangulo.style.animation = "rec1 0.8s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+                cronometro.style.opacity = "1";
                 figureCronometro.style.animation = "rolar 0.6s ease-out 3.3s both";
                 cronometro.style.animation = "cronometro 0.8s 4s 4 both";
                 //numeros.style.animation = "texto2 2s linear 4.2s 2 both";
                 numeros.style.animation = "texto2 5s linear 3s 1 both";
-                rectangulo.style.animation = "rec1 0.8s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
-                cronometro.style.opacity = "1";
+                cronometro.style.animationPlayState = "running";
+                teste_cronometro.style.animationPlayState = "running";
                 risco.style.opacity = "1";
                 hgroup2.style.opacity = "1";
                 hgroup2.style.animation = "opacity1 2s ease-in";
                 link_site.style.opacity = "1";
                 link_site.style.animation = "opacity1 2.5s ease-in";
-                cronometro.style.animationPlayState = "running";
-                teste_cronometro.style.animationPlayState = "running";
                 codepen.style.fill = "var(--corhgroug2)";
                 github.style.fill = "var(--corhgroug2)";
                 linkedin.style.fill = "var(--corhgroug2)";
