@@ -3,12 +3,11 @@
 
 window.addEventListener("load", function() {
 
-
-    window.addEventListener('resize', () => {
-      // Executa o mesmo script de antes
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
+// Altura da viewport multiplicada por 1% para obter um valor para vh
+let vh = window.innerHeight * 0.01;
+ 
+// Configura o valor em --vh na raiz do documento
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
     var loading = document.getElementById('loading');
