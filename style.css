@@ -1831,7 +1831,7 @@ section {
         height: 140px; 
         transition: none;
         left: 55vw;
-        bottom: calc(5vh - 80px);
+        bottom: -5vh;
         position: absolute;
     }
 
