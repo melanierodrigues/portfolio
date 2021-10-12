@@ -1895,14 +1895,9 @@ section {
         opacity: 0;
     }
 
-    #footer1 {
-        font-size: 10px;
-        writing-mode: initial;
-        top: calc(100vh - 50vh);
-        bottom: 0;
-        right: 5vw;
-        position: absolute;
-        visibility: visible;
+    footer p {
+        font-size: 12px;
+        transform: rotate(-90deg);
     }
 }
 /* -------------------------------- END - Media Screen -------------------------------------- */
