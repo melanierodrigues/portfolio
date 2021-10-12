@@ -243,6 +243,7 @@ var foto = document.getElementById('foto');
 var footer1 = document.getElementById('footer1'); 
 var redesSociais = document.getElementById('redes_sociais');
 var redesSociaisFooter = document.getElementById('redes_sociaisfooter');  
+var link_site4 = document.getElementById('link_site4');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
@@ -266,7 +267,7 @@ observer = new IntersectionObserver ((entries) => {
         requestAnimationFrame(aboutme1);
     })
 });
-observer.observe(footer1);
+observer.observe(link_site4); //foto
 
 
 
