@@ -2,6 +2,12 @@
 //window.addEventListener("load", inicia);
 
 window.addEventListener("load", function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+
+
     var loading = document.getElementById('loading');
 
 var pirilampo = document.querySelectorAll('#pirilampo');
@@ -65,7 +71,7 @@ observer = new IntersectionObserver ((entries) => {
             }
         }
         requestAnimationFrame(hello1);
-        document.documentElement.requestFullscreen();
+        //document.documentElement.requestFullscreen();
     })
 });
 
