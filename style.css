@@ -1828,10 +1828,10 @@ section {
 
     #cronometro {
         width: auto;
-        height: 140px; 
+        height: 130px; 
         transition: none;
         left: 55vw;
-        bottom: -5vh;
+        bottom: -4vh;
         position: absolute;
     }
 
