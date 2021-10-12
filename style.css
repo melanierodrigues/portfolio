@@ -1813,17 +1813,25 @@ section {
     #pinypong {
         opacity: 0;
     }
+    /*
 
-    #teste_cronometro, #figure_cronometro {
-        animation: none;
-    }
-
-    #cronometro {
+        #cronometro {
         width: auto;
         height: 150px; 
         transition: none;
         left: 55vw;
         bottom: 0vh;
+        position: absolute;
+    }
+
+    */
+
+    #cronometro {
+        width: auto;
+        height: 140px; 
+        transition: none;
+        left: 55vw;
+        bottom: calc(5vh - 80px);
         position: absolute;
     }
 
