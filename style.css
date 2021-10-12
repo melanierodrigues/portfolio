@@ -80,9 +80,6 @@ body {
     overscroll-behavior: contain;
 }
 
-html { height: 100vh; }
-body { height: 100%; }
-
 header {
     display: none;
 }
@@ -1682,6 +1679,10 @@ section {
 
 
 @media only screen and (max-width: 485px) and (max-width: 850px) {
+    main {
+        height: calc(100vh - 60px);
+    }
+
     #seta {
         bottom: calc(50vh + 9px);
         opacity: 0.1;
