@@ -1899,11 +1899,8 @@ section {
     #footer1 {
         font-size: 10px;
         writing-mode: initial;
-        bottom: auto;
-        top: 45vh;
-        left: auto;
+        top: 50vh;
         right: 5vw;
-        text-align: center;
     }
 }
 /* -------------------------------- END - Media Screen -------------------------------------- */
