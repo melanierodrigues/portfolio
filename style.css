@@ -1899,8 +1899,10 @@ section {
     #footer1 {
         font-size: 10px;
         writing-mode: initial;
-        bottom: 25vh;
-        right: 10px;
+        bottom: auto;
+        top: 70vh;
+        left: auto;
+        right: 5vw;
         text-align: center;
     }
 }
