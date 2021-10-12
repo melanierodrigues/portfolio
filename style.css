@@ -1827,13 +1827,24 @@ section {
     */
 
     #cronometro {
-        width: auto;
-        height: 130px; 
+        height: 150px; 
         transition: none;
-        left: 55vw;
-        bottom: -4vh;
+        top: calc(100% - 280px);
+        left: auto;
+        right: -30vw;
         position: absolute;
     }
+
+    @keyframes rolar {
+        0% {
+          transform: translateX(800px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0) rotate(0deg);
+          opacity: 1;
+        }
+      }
 
     #calculadora {
         width: auto;
