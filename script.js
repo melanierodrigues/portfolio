@@ -44,7 +44,7 @@ inicia();
 */
 
 
-var ball   = document.querySelectorAll('#hgroup1');
+var ball   = document.querySelectorAll('.ball');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
