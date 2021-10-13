@@ -26,6 +26,8 @@ function inicia() {
     setTimeout(inicia, 3000);
 };
 
+/*
+
 // Folhas - Mousemove
 document.addEventListener("mousemove", parallax);
 
@@ -41,6 +43,8 @@ function parallax(e){
 }
 inicia();
 
+
+*/
 
 var hgroup1 = document.querySelector('#hgroup1');
 var garden = document.querySelector('.hello');
@@ -85,7 +89,7 @@ function handleOrientation(event) {
     });
   }
 
-  window.addEventListener("deviceorientation", handleOrientation, true);
+  window.addEventListener("deviceorientation", handleOrientation);
 
   inicia();
 
