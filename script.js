@@ -44,12 +44,12 @@ inicia();
 */
 
 
-var hgroup1 = document.querySelector('#hgroup1');
+var folha = document.querySelectorAll('#folha');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
-var maxX = folha.clientWidth;
-var maxY = folha.clientHeight;
+var maxX = garden.clientWidth  - folha.clientWidth;
+var maxY = garden.clientHeight - folha.clientHeight;
 
 function handleOrientation(event) {
 
@@ -75,17 +75,21 @@ function handleOrientation(event) {
     var top  = (maxY*y/180) + "px";
     var left = (maxX*x/180) + "px";
 
+    folha.style.top  = (maxY*y/180 - 10) + "px";
+    folha.style.left = (maxX*x/180 - 10) + "px";
 
     // Do stuff with the new orientation data
 
+    /*
     document.querySelectorAll('#folha').forEach(function(move) {
 
         var value_data = move.getAttribute("data-value");
-        var m = (output*value_data) / 300;
-        var l = (output*value_data) / 300;
+        var m = (x * value_data) / 300;
+        var l = (y * value_data) / 300;
 
         move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
     });
+    */
   }
 
   window.addEventListener("deviceorientation", handleOrientation);
