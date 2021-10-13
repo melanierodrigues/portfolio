@@ -50,8 +50,8 @@ var maxX = garden.clientWidth  - folha.clientWidth;
 var maxY = garden.clientHeight - folha.clientHeight;
 
 function handleOrientation(event) {
-    var x = event.beta;  // In degree in the range [-180,180)
-    var y = event.gamma; // In degree in the range [-90,90)
+    var x2 = event.beta;  // In degree in the range [-180,180)
+    var y2 = event.gamma; // In degree in the range [-90,90)
   
     output.textContent  = `beta : ${x}\n`;
     output.textContent += `gamma: ${y}\n`;
@@ -78,14 +78,14 @@ function handleOrientation(event) {
     document.querySelectorAll('#folha').forEach(function(move) {
 
         var value_data = move.getAttribute("data-value");
-        var m = (x*value_data) / 300;
-        var l = (y*value_data) / 300;
+        var m = (x2*value_data);
+        var l = (y2*value_data);
 
         move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
     });
   }
 
-  window.addEventListener("deviceorientation", handleOrientation, true);
+  window.addEventListener("deviceorientation", handleOrientation);
 
   inicia();
 
