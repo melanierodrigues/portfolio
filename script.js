@@ -71,8 +71,11 @@ function handleOrientation(event) {
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
 
-        folha.style.top  = (maxY*y/180 - 10) + "px";
-        folha.style.left = (maxX*x/180 - 10) + "px";
+    var value_data = folha.getAttribute("data-value");
+    var m = (event.clientX * value_data) / 300;
+    var l = (event.clientY * value_data) / 300;
+
+        folha.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)";
 
 
     // Do stuff with the new orientation data
