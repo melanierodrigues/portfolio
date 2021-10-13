@@ -44,52 +44,39 @@ inicia();
 */
 
 
-var folha = document.querySelector('#figure_recortes');
+var ball   = document.querySelector('#hgroup1');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
-var maxX = this.window.clientWidth  - folha.clientWidth;
-var maxY = this.window.clientHeight - folha.clientHeight;
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
+  var x = event.beta;  // In degree in the range [-180,180)
+  var y = event.gamma; // In degree in the range [-90,90)
 
-    var x = event.beta;  // In degree in the range [-180,180)
-    var y = event.gamma; // In degree in the range [-90,90)
-  
-    output.textContent  = `beta : ${x}\n`;
-    output.textContent += `gamma: ${y}\n`;
-  
-    // Because we don't want to have the device upside down
-    // We constrain the x value to the range [-90,90]
-    if (x >  90) { x =  90};
-    if (x < -90) { x = -90};
-  
-    // To make computation easier we shift the range of
-    // x and y to [0,180]
-    x += 90;
-    y += 90;
-  
-    // 10 is half the size of the ball
-    // It center the positioning point to the center of the ball
+  output.textContent  = `beta : ${x}\n`;
+  output.textContent += `gamma: ${y}\n`;
 
-    folha.style.top  = (maxY*y/180) + "px";
-    folha.style.left = (maxX*x/180) + "px";
+  // Because we don't want to have the device upside down
+  // We constrain the x value to the range [-90,90]
+  if (x >  90) { x =  90};
+  if (x < -90) { x = -90};
 
-    // Do stuff with the new orientation data
+  // To make computation easier we shift the range of
+  // x and y to [0,180]
+  x += 90;
+  y += 90;
 
-    /*
-    document.querySelectorAll('#folha').forEach(function(move) {
+  // 10 is half the size of the ball
+  // It center the positioning point to the center of the ball
+  ball.style.top  = (maxY*y/180 - 10) + "px";
+  ball.style.left = (maxX*x/180 - 10) + "px";
+}
 
-        var value_data = move.getAttribute("data-value");
-        var m = (x * value_data) / 300;
-        var l = (y * value_data) / 300;
+window.addEventListener('deviceorientation', handleOrientation);
 
-        move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
-    });
-    */
-  }
 
-  window.addEventListener("deviceorientation", handleOrientation);
   inicia();
 
 
