@@ -44,7 +44,7 @@ inicia();
 */
 
 
-var folha = document.querySelectorAll('#folha');
+var folha = document.querySelector('#folha1');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
@@ -75,8 +75,8 @@ function handleOrientation(event) {
     var top  = (maxY*y/180) + "px";
     var left = (maxX*x/180) + "px";
 
-    folha.style.top  = (maxY*y/180 - 10) + "px";
-    folha.style.left = (maxX*x/180 - 10) + "px";
+    folha.style.top  = (y * 2) + "px";
+    folha.style.left = (x * 2) + "px";
 
     // Do stuff with the new orientation data
 
