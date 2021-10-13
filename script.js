@@ -42,18 +42,37 @@ function parallax(e){
 inicia();
 
 
-document.addEventListener("touchmove", parallax2);
 
-function parallax2(e2){
-    document.querySelectorAll('#folha').forEach(function(move2) {
 
-        var value_data2 = move2.getAttribute("data-value");
-        var m = (e2.clientX * value_data2) / 300;
-        var l = (e2.clientY * value_data2) / 300;
+document.addEventListener('touchstart', process_touchstart);
+document.addEventListener('touchmove', process_touchmove);
 
-        move2.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
+
+function process_touchstart(ev) {
+    // Use the event's data to call out to the appropriate gesture handlers
+    document.querySelectorAll('#folha').forEach(function(move) {
+
+        var value_data = move.getAttribute("data-value");
+        var m = (ev.clientX * value_data) / 300;
+        var l = (ev.clientY * value_data) / 300;
+
+        move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
     });
-}
+  }
+
+document.addEventListener('touchstart', function(ev) {
+    // Iterate through the touch points that were activated
+    // for this element and process each event 'target'
+    for (var i=0; i < ev.targetTouches.length; i++) {
+      process_target(ev.targetTouches[i].target);
+    }
+  }, false);
+
+
+  function process_touchmove(ev) {
+    // Set call preventDefault()
+    ev.preventDefault();
+  }
 inicia();
 //
 
