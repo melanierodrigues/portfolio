@@ -338,7 +338,9 @@ section {
     right: -10px;
 }
 
-#folha {
+#folha, #folhaesta {
+    position: absolute; /* posso apagar */
+    inset: 0; /* posso apagar */
     transform: translateX(100px) translateY(20px) scale(0.9);
     transform-origin: bottom;
 }
