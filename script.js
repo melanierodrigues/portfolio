@@ -43,13 +43,13 @@ inicia();
 
 
 
-
+var output = document.querySelector('.hello');
 
 function handleOrientation(event) {
     var folha = document.querySelectorAll('#folha');
-    var value_data = folha.getAttribute("data-value");
-    var maxX = (event.clientX * value_data) / 300;
-    var maxY = (event.clientY * value_data) / 300;
+    //var value_data = folha.getAttribute("data-value");
+    var maxX = document.clientWidth  - folha.clientWidth;
+    var maxY = document.clientHeight - folha.clientHeight;
 
     var x = event.beta;  // In degree in the range [-180,180)
     var y = event.gamma; // In degree in the range [-90,90)
