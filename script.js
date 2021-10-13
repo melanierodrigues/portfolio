@@ -48,8 +48,8 @@ var hgroup1 = document.querySelector('#hgroup1');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
-var maxX = garden.clientWidth  - folha.clientWidth;
-var maxY = garden.clientHeight - folha.clientHeight;
+var maxX = folha.clientWidth;
+var maxY = folha.clientHeight;
 
 function handleOrientation(event) {
 
@@ -72,8 +72,8 @@ function handleOrientation(event) {
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
 
-    var top  = (maxY*y/180 - 10) + "px";
-    var left = (maxX*x/180 - 10) + "px";
+    var top  = (maxY*y/180) + "px";
+    var left = (maxX*x/180) + "px";
 
 
     // Do stuff with the new orientation data
@@ -81,14 +81,14 @@ function handleOrientation(event) {
     document.querySelectorAll('#folha').forEach(function(move) {
 
         var value_data = move.getAttribute("data-value");
-        var m = (top*value_data) / 300;
-        var l = (left*value_data) / 300;
+        var m = (output*value_data) / 300;
+        var l = (output*value_data) / 300;
 
         move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
     });
   }
 
-  window.addEventListener("deviceorientation", handleOrientation, true);
+  window.addEventListener("deviceorientation", handleOrientation);
   inicia();
 
 
