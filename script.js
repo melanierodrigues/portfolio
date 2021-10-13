@@ -42,38 +42,35 @@ function parallax(e){
 inicia();
 
 
+function handleOrientation(event) {
+    var x = event.beta;  // In degree in the range [-180,180)
+    var y = event.gamma; // In degree in the range [-90,90)
+  
+    output.textContent  = `beta : ${x}\n`;
+    output.textContent += `gamma: ${y}\n`;
+  
+    // Because we don't want to have the device upside down
+    // We constrain the x value to the range [-90,90]
+    if (x >  90) { x =  90};
+    if (x < -90) { x = -90};
+  
+    // To make computation easier we shift the range of
+    // x and y to [0,180]
+    x += 90;
+    y += 90;
+  
+    // 10 is half the size of the ball
+    // It center the positioning point to the center of the ball
+    var folha = document.querySelectorAll('#folha')
+    folha.style.top  = (maxY*y/180 - 10) + "px";
+    folha.style.left = (maxX*x/180 - 10) + "px";
 
 
-document.addEventListener('touchstart', process_touchstart);
-document.addEventListener('touchmove', process_touchmove);
-
-
-function process_touchstart(ev) {
-    // Use the event's data to call out to the appropriate gesture handlers
-    document.querySelectorAll('#folha').forEach(function(move) {
-
-        var value_data = move.getAttribute("data-value");
-        var m = (ev.clientX * value_data) / 300;
-        var l = (ev.clientY * value_data) / 300;
-
-        move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
-    });
+    // Do stuff with the new orientation data
   }
+  window.addEventListener('deviceorientation', handleOrientation);
+  inicia();
 
-document.addEventListener('touchstart', function(ev) {
-    // Iterate through the touch points that were activated
-    // for this element and process each event 'target'
-    for (var i=0; i < ev.targetTouches.length; i++) {
-      process_target(ev.targetTouches[i].target);
-    }
-  }, false);
-
-
-  function process_touchmove(ev) {
-    // Set call preventDefault()
-    ev.preventDefault();
-  }
-inicia();
 //
 
 var codepen = document.getElementById('codepen');
