@@ -44,7 +44,7 @@ inicia();
 */
 
 
-var ball   = document.querySelector('#folhaesta');
+var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
@@ -70,8 +70,8 @@ function handleOrientation(event) {
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
-  ball.style.transform  = "translateY((maxY*y/180 - 10) + px)";
-  ball.style.transform =  "translateX((maxX*x/180 - 10) + px)";
+  ball.style.transform  = transformY(maxY*y/180 - 10) + "px";
+  ball.style.transform = transformX(maxX*x/180 - 10) + "px";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
