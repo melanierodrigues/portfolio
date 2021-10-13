@@ -42,6 +42,9 @@ function parallax(e){
 inicia();
 
 
+
+window.addEventListener("deviceorientation", handleOrientation, true);
+
 function handleOrientation(event) {
     var x = event.beta;  // In degree in the range [-180,180)
     var y = event.gamma; // In degree in the range [-90,90)
@@ -61,15 +64,17 @@ function handleOrientation(event) {
   
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
-    var folha = document.querySelectorAll('#folha')
-    folha.style.top  = (maxY*y/180 - 10) + "px";
-    folha.style.left = (maxX*x/180 - 10) + "px";
+    document.querySelectorAll('#folha').forEach(function(move) {
+
+        move.style.top  = (maxY*y/180 - 10) + "px";
+        move.style.left = (maxX*x/180 - 10) + "px";
+    });
 
 
     // Do stuff with the new orientation data
   }
-  window.addEventListener('deviceorientation', handleOrientation);
-  inicia();
+window.addEventListener('deviceorientation', handleOrientation);
+
 
 //
 
