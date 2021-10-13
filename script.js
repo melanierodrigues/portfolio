@@ -40,6 +40,21 @@ function parallax(e){
     });
 }
 inicia();
+
+
+document.addEventListener("touchmove", parallax2);
+
+function parallax2(e2){
+    document.querySelectorAll('#folha').forEach(function(move2) {
+
+        var value_data2 = move2.getAttribute("data-value");
+        var m = (e2.clientX * value_data2) / 300;
+        var l = (e2.clientY * value_data2) / 300;
+
+        move2.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
+    });
+}
+inicia();
 //
 
 var codepen = document.getElementById('codepen');
