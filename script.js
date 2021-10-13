@@ -42,14 +42,15 @@ function parallax(e){
 inicia();
 
 
-
+var folha = document.querySelector('#folha');
+var garden = document.querySelector('#figure_folhas');
 var output = document.querySelector('.hello');
 
+var maxX = garden.clientWidth  - folha.clientWidth;
+var maxY = garden.clientHeight - folha.clientHeight;
+
 function handleOrientation(event) {
-    var folha = document.querySelectorAll('#folha');
     //var value_data = folha.getAttribute("data-value");
-    var maxX = document.clientWidth  - folha.clientWidth;
-    var maxY = document.clientHeight - folha.clientHeight;
 
     var x = event.beta;  // In degree in the range [-180,180)
     var y = event.gamma; // In degree in the range [-90,90)
