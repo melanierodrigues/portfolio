@@ -1344,11 +1344,12 @@ section {
     margin-top: 5vh;
 }
 
-#link_site4:hover {
-    background-color: var(--corhgroug5);
-    color: var(--cor2);
-}
-
+@media(hover: hover) and (pointer: fine) {
+    #link_site4:hover {
+        background-color: var(--corhgroug5);
+        color: var(--cor2);
+    }
+    }
 
 #redes_sociaisfooter {
     display: none;
