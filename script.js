@@ -44,12 +44,12 @@ inicia();
 */
 
 
-var folha = document.querySelector('#folha1');
+var folha = document.querySelector('#figure_recortes');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
-var maxX = garden.clientWidth  - folha.clientWidth;
-var maxY = garden.clientHeight - folha.clientHeight;
+var maxX = this.window.clientWidth  - folha.clientWidth;
+var maxY = this.window.clientHeight - folha.clientHeight;
 
 function handleOrientation(event) {
 
@@ -72,11 +72,8 @@ function handleOrientation(event) {
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
 
-    var top  = (maxY*y/180) + "px";
-    var left = (maxX*x/180) + "px";
-
-    folha.style.top  = (y * 2) + "px";
-    folha.style.left = (x * 2) + "px";
+    folha.style.top  = (maxY*y/180) + "px";
+    folha.style.left = (maxX*x/180) + "px";
 
     // Do stuff with the new orientation data
 
