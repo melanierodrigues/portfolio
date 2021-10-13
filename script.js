@@ -45,7 +45,7 @@ inicia();
 
 
 var ball   = document.querySelector('#folhaesta');
-var garden = document.querySelector('#folhas');
+var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
