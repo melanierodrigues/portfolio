@@ -78,7 +78,7 @@ function handleOrientation(event) {
     // Do stuff with the new orientation data
   }
 
-  window.addEventListener("deviceorientation", handleOrientation);
+  window.addEventListener("deviceorientation", handleOrientation, true);
 
   inicia();
 
