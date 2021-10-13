@@ -44,7 +44,7 @@ inicia();
 
 var folha = document.querySelector('#folha');
 var garden = document.querySelector('#figure_folhas');
-var output = document.querySelector('.hello');
+var output = document.querySelector('#figure_folhas');
 
 var maxX = garden.clientWidth  - folha.clientWidth;
 var maxY = garden.clientHeight - folha.clientHeight;
