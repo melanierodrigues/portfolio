@@ -42,9 +42,9 @@ function parallax(e){
 inicia();
 
 
-var folha = document.querySelector('#folha');
-var garden = document.querySelector('#figure_folhas');
-var output = document.querySelector('#figure_folhas');
+var hgroup1 = document.querySelector('#hgroup1');
+var garden = document.querySelector('.hello');
+var output = document.querySelector('.output');
 
 var maxX = garden.clientWidth  - folha.clientWidth;
 var maxY = garden.clientHeight - folha.clientHeight;
@@ -71,11 +71,8 @@ function handleOrientation(event) {
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
 
-    var value_data = folha.getAttribute("data-value");
-    var m = (folha.clientWidth * 2) / 300;
-    var l = (folha.clientHeight *2) / 300;
-
-        folha.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)";
+    hgroup1.style.top  = (maxY*y/180 - 10) + "px";
+    hgroup1.style.left = (maxX*x/180 - 10) + "px";
 
 
     // Do stuff with the new orientation data
