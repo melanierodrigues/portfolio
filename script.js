@@ -58,13 +58,13 @@ function handleOrientation(event) {
   
     // Because we don't want to have the device upside down
     // We constrain the x value to the range [-90,90]
-    if (x >  90) { x =  90};
-    if (x < -90) { x = -90};
+    if (x2 >  90) { x2 =  90};
+    if (x2 < -90) { x2 = -90};
   
     // To make computation easier we shift the range of
     // x and y to [0,180]
-    x += 90;
-    y += 90;
+    x2 += 90;
+    y2 += 90;
   
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
@@ -78,14 +78,14 @@ function handleOrientation(event) {
     document.querySelectorAll('#folha').forEach(function(move) {
 
         var value_data = move.getAttribute("data-value");
-        var m = (x2*value_data);
-        var l = (y2*value_data);
+        var m = (x2*2);
+        var l = (y2*2);
 
         move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
     });
   }
 
-  window.addEventListener("deviceorientation", handleOrientation);
+  window.addEventListener("deviceorientation", handleOrientation, true);
 
   inicia();
 
