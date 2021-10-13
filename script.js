@@ -46,7 +46,8 @@ inicia();
 
 
 function handleOrientation(event) {
-    var value_data = move.getAttribute("data-value");
+    var folha = document.querySelectorAll('#folha');
+    var value_data = folha.getAttribute("data-value");
     var maxX = (event.clientX * value_data) / 300;
     var maxY = (event.clientY * value_data) / 300;
 
@@ -68,17 +69,15 @@ function handleOrientation(event) {
   
     // 10 is half the size of the ball
     // It center the positioning point to the center of the ball
-    document.querySelectorAll('#folha').forEach(function(move) {
 
-        move.style.top  = (maxY*y/180 - 10) + "px";
-        move.style.left = (maxX*x/180 - 10) + "px";
-    });
+        folha.style.top  = (maxY*y/180 - 10) + "px";
+        folha.style.left = (maxX*x/180 - 10) + "px";
 
 
     // Do stuff with the new orientation data
   }
 
-  window.addEventListener("deviceorientation", handleOrientation, true);
+  window.addEventListener("deviceorientation", handleOrientation);
 
   inicia();
 
