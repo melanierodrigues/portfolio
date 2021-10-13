@@ -43,9 +43,13 @@ inicia();
 
 
 
-window.addEventListener("deviceorientation", handleOrientation, true);
+
 
 function handleOrientation(event) {
+    var value_data = move.getAttribute("data-value");
+    var maxX = (event.clientX * value_data) / 300;
+    var maxY = (event.clientY * value_data) / 300;
+
     var x = event.beta;  // In degree in the range [-180,180)
     var y = event.gamma; // In degree in the range [-90,90)
   
@@ -73,8 +77,10 @@ function handleOrientation(event) {
 
     // Do stuff with the new orientation data
   }
-window.addEventListener('deviceorientation', handleOrientation);
 
+  window.addEventListener("deviceorientation", handleOrientation, true);
+
+  inicia();
 
 //
 
