@@ -1618,16 +1618,6 @@ section {
         transform-box: fill-box;
     }
 
-    /* ATENÇÂO APAGAR ESTE FOLHA */
-
-    #folha {
-        /* transform: translateX(100px) translateY(20px) scale(0.9); */
-        transform: unset;
-        transform-origin: bottom;
-        inset: unset;
-        top: 500px;
-    }
-
     #recortes {
         transform: rotate(90deg);
         width: auto;
