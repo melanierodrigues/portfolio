@@ -44,7 +44,7 @@ inicia();
 */
 
 
-var ball   = document.querySelector('#folhaesta');
+var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
