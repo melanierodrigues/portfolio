@@ -50,8 +50,6 @@ var maxX = garden.clientWidth  - folha.clientWidth;
 var maxY = garden.clientHeight - folha.clientHeight;
 
 function handleOrientation(event) {
-    //var value_data = folha.getAttribute("data-value");
-
     var x = event.beta;  // In degree in the range [-180,180)
     var y = event.gamma; // In degree in the range [-90,90)
   
@@ -76,6 +74,15 @@ function handleOrientation(event) {
 
 
     // Do stuff with the new orientation data
+
+    document.querySelectorAll('#folha').forEach(function(move) {
+
+        var value_data = move.getAttribute("data-value");
+        var m = (x*value_data) / 300;
+        var l = (y*value_data) / 300;
+
+        move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
+    });
   }
 
   window.addEventListener("deviceorientation", handleOrientation, true);
