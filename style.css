@@ -466,10 +466,12 @@ section {
     transition: 0.3s ease-in-out;
 }
 
-#codepen:hover, #github:hover, #linkedin:hover {
-    stroke: var(--corhgroug2);
-    transform: scale(1.2);
-    cursor: url(CursorB-01.png) 4 12, pointer;
+@media(hover: hover) and (pointer: fine) {
+    #codepen:hover, #github:hover, #linkedin:hover {
+        stroke: var(--corhgroug2);
+        transform: scale(1.2);
+        cursor: url(CursorB-01.png) 4 12, pointer;
+    }
 }
 /* -------------------------------- END - Social Media -------------------------------------- */
 
@@ -534,8 +536,10 @@ section {
     top: 23vh;
 }
 
-#link_site:hover {
-    background-color: var(--corriscosectionproject1);
+@media(hover: hover) and (pointer: fine) {
+    #link_site:hover {
+        background-color: var(--corriscosectionproject1);
+    }
 }
 
 #teste_cronometro {
@@ -959,8 +963,10 @@ section {
     top: 23vh;
 }
 
-#link_site2:hover {
-    background-color: var(--corriscosectionproject2);
+@media(hover: hover) and (pointer: fine) {
+    #link_site2:hover {
+        background-color: var(--corriscosectionproject2);
+    }
 }
 
 @keyframes olhos {
@@ -1166,8 +1172,10 @@ section {
     top: 23vh;
 }
 
-#link_site3:hover {
-    background-color: var(--correctanguloprojecto3);
+@media(hover: hover) and (pointer: fine) {
+    #link_site3:hover {
+        background-color: var(--correctanguloprojecto3);
+    }
 }
 
 #uni {
@@ -1349,7 +1357,7 @@ section {
         background-color: var(--corhgroug5);
         color: var(--cor2);
     }
-    }
+}
 
 #redes_sociaisfooter {
     display: none;
@@ -1706,10 +1714,12 @@ section {
         transition: 0.3s ease-in-out;
     }
     
-    #codepenfooter:hover, #githubfooter:hover, #linkedinfooter:hover {
-        stroke: var(--cor3);
-        transform: scale(1.2);
-        cursor: url(CursorB-01.png) 4 12, pointer;
+    @media(hover: hover) and (pointer: fine) {
+        #codepenfooter:hover, #githubfooter:hover, #linkedinfooter:hover {
+            stroke: var(--cor3);
+            transform: scale(1.2);
+            cursor: url(CursorB-01.png) 4 12, pointer;
+        }
     }
 
     #redes_sociais {
