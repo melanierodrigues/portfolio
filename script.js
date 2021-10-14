@@ -71,8 +71,19 @@ function handleOrientation(event) {
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
-  ball.style.top  = (maxY*y/180 - 10) + "px";
-  ball.style.left = (maxX*x/180 - 10) + "px";
+ 
+  //ball.style.top  = (maxY*y/180 - 10) + "px";
+  //ball.style.left = (maxX*x/180 - 10) + "px";
+
+
+  document.querySelectorAll('#test').forEach(function(move) {
+
+    var value_data = move.getAttribute("data-value");
+    var m = ((maxY*y/180) * value_data) / 300;
+    var l = ((maxX*x/180) * value_data) / 300;
+
+    move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)"; 
+});
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
