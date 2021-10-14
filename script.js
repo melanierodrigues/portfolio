@@ -76,14 +76,16 @@ function handleOrientation(event) {
   //ball.style.left = (maxX*x/180 - 10) + "px";
 
 
-  document.querySelectorAll('#test').forEach(function(move) {
+  document.querySelectorAll('#folha').forEach(function(move) {
 
     var value_data = move.getAttribute("data-value");
-    var m = ((maxY*y/180) * value_data) / 300;
-    var l = ((maxX*x/180) * value_data) / 300;
+    var m = (x * value_data) / 300;
+    var l = (y * value_data) / 300;
 
-    move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)"; 
+    move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
 });
+
+
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
