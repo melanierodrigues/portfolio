@@ -70,11 +70,16 @@ function handleOrientation(event) {
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
   
-  if (screen.width < 850 || screen.height < 480) {
+  if (screen.width < 480 || screen.height < 850) {
     // sirva a versão pra celular
     recortes1.style.top  = (maxY*y/130 + 150) + "px";
     recortes1.style.left = (maxX*x/180 - 150) + "px";
 } 
+
+if (screen.width > 850 || screen.height < 480) {
+    // sirva a versão pra celular
+    recortes1.style.transform = "translateY(-550px)" + "rotate(90deg)" + "translateX(550px)";
+}
 }
 window.addEventListener('deviceorientation', handleOrientation);
 
