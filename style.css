@@ -1797,7 +1797,7 @@ section {
     }
 
     #recortes {
-        height: 250px;
+        height: auto;
         width: auto;
         transform: translateX(100px) rotate(90deg) scale(0.8);
         left: 50px;
