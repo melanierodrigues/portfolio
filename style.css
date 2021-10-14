@@ -329,7 +329,7 @@ section {
 }
 
 #folha {
-    transform: translateX(100px) translateY(20px) scale(0.9);
+    transform: translateX(100px) translateY(20px) scale(0.8);
     transform-origin: bottom;
 }
 
