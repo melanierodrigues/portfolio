@@ -44,7 +44,8 @@ inicia();
 */
 
 
-var ball   = document.querySelectorAll('.ball');
+
+var ball   = document.querySelectorAll('#recortes');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
