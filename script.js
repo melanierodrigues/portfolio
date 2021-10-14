@@ -1,12 +1,9 @@
 // Pirilampos - Random 
-//window.addEventListener("load", inicia);
-
 window.addEventListener("load", function() {
     var loading = document.getElementById('loading');
     var pirilampo = document.querySelectorAll('#pirilampo');
 
 function inicia() {
-
     for(i=0; i < pirilampo.length; i++) {
         var x = Math.floor((Math.random() * -500) + 500);
         var y = Math.floor((Math.random() * -500) + 100);
@@ -72,19 +69,17 @@ function handleOrientation(event) {
   
   if (screen.width < 480 && screen.height < 850) {
     // sirva a versão pra celular
-    recortes1.style.left  = (maxY*y/130 + 150) + "px";
-    recortes1.style.top = (maxX*x/180 - 150) + "px";
+    recortes1.style.top  = (maxY*y/130 + 150) + "px";
+    recortes1.style.left = (maxX*x/180 - 150) + "px";
     } 
 }
 window.addEventListener('deviceorientation', handleOrientation);
 
-//
 
 var codepen = document.getElementById('codepen');
 var github = document.getElementById('github');
 var linkedin = document.getElementById('linkedin');
 var hgroup1 = document.getElementById('hgroup1'); 
-var folhas = document.getElementById('folhas'); 
 
 // Hello //
 observer = new IntersectionObserver ((entries) => {
@@ -98,11 +93,9 @@ observer = new IntersectionObserver ((entries) => {
                 codepen.style.stroke = "var(--cor3)";
                 github.style.stroke = "var(--cor3)";
                 linkedin.style.stroke = "var(--cor3)";
-                //hgroup2.style.opacity = "0"; 
             }
         }
         requestAnimationFrame(hello1);
-        //document.documentElement.requestFullscreen();
     })
 });
 observer.observe(hgroup1);
@@ -130,7 +123,6 @@ observer = new IntersectionObserver ((entries) => {
                 cronometro.style.opacity = "1";
                 figureCronometro.style.animation = "rolar 0.6s ease-out 3.3s both";
                 cronometro.style.animation = "cronometro 0.8s 4s 4 both";
-                //numeros.style.animation = "texto2 2s linear 4.2s 2 both";
                 numeros.style.animation = "texto2 5s linear 3s 1 both";
                 cronometro.style.animationPlayState = "running";
                 teste_cronometro.style.animationPlayState = "running";
@@ -252,7 +244,6 @@ observer = new IntersectionObserver ((entries) => {
                 rectangulo3.style.animation = "rec1 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both";
                 rectangulo3.style.animationPlayState = "running";
                 pinypong.style.animationPlayState = "running";
-                risco3.style.animationPlayState = "running";
                 teste_pinypong.style.animationPlayState = "running";
                 teste_pinypong.style.animation = "testepinypong 1s ease-in 0.3s both";
                 bola_pinypong.style.animation = "bola_pinypong 3s ease-in 0.3s  infinite";
