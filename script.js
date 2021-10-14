@@ -37,16 +37,16 @@ function parallax(e){
         var m = (e.clientX * value_data) / 300;
         var l = (e.clientY * value_data) / 300;
 
-        move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
+        move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.83)"; 
     });
 }
 inicia();
 
-// Recortes - deviceorientation
+
+// Recortes com deviceorientation para telemóveis
 var recortes1 = document.querySelector('#recortes');
 var hello1 = document.querySelector('.hello');
 var output = document.querySelector('.output');
-
 var maxX = hello1.clientWidth  - recortes1.clientWidth;
 var maxY = hello1.clientHeight - recortes1.clientHeight;
 
@@ -70,9 +70,11 @@ function handleOrientation(event) {
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
   
- 
-  recortes1.style.top  = (maxY*y/180 + 150) + "px";
-  recortes1.style.left = (maxX*x/180 - 150) + "px";
+  if (screen.width < 850 || screen.height < 480) {
+    // sirva a versão pra celular
+    recortes1.style.top  = (maxY*y/130 + 150) + "px";
+    recortes1.style.left = (maxX*x/180 - 150) + "px";
+} 
 }
 window.addEventListener('deviceorientation', handleOrientation);
 
@@ -103,7 +105,6 @@ observer = new IntersectionObserver ((entries) => {
         //document.documentElement.requestFullscreen();
     })
 });
-
 observer.observe(hgroup1);
 
 
