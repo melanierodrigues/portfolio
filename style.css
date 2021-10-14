@@ -1797,7 +1797,10 @@ section {
     }
 
     #recortes {
-        left: 0px;
+        height: 250px;
+        width: auto;
+        transform: translateX(100px) rotate(90deg) scale(0.8);
+        left: 50px;
         top: 0px;
     }
 }
