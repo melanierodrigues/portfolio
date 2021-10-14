@@ -1804,6 +1804,7 @@ section {
             top: 0px;
         }
     }
+
 }
 
 @media only screen and (max-width: 850px) and (max-height: 450px) {
@@ -1852,6 +1853,14 @@ section {
         right: -35vw;
         position: absolute;
     }
+
+    /*
+    @media (pointer: coarse) {
+        #recortes {
+            transform: translateX(100px) translateY(-250px) rotate(90deg) scale(0.8);
+        }
+    }
+    */
 
     @keyframes rolar {
         0% {
