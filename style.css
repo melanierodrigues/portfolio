@@ -1799,7 +1799,7 @@ section {
     #recortes {
         height: 250px;
         width: auto;
-        transform: translateX(350px) rotate(90deg) scale(0.8);
+        transform: translateX(200px) rotate(90deg) scale(0.8);
         left: 50px;
         top: 0px;
     }
