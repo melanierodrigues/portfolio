@@ -1618,23 +1618,6 @@ section {
         transform-box: fill-box;
     }
 
-    #teste {
-        height: 100vh;
-        width: 100vw;
-        z-index: 999;
-        position: absolute;
-        top: 50px;
-        left: 50px;
-    }
-
-    #folhateste {
-        width: 150px;
-        height: auto;
-        right: 0vw;
-        position: absolute;
-        inset: 0;
-    }
-
     #recortes {
         transform: rotate(90deg);
         width: auto;
@@ -1812,6 +1795,16 @@ section {
         font-size: 12px;
         transform: rotate(180deg);
     }
+
+    #teste {
+        height: 100vh;
+        width: 100vw;
+        z-index: 999;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
 
 }
 
