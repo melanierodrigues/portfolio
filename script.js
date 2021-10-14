@@ -45,7 +45,7 @@ inicia();
 
 
 
-var ball   = document.querySelector('#teste');
+var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
