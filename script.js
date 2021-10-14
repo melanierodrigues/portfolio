@@ -73,8 +73,8 @@ function handleOrientation(event) {
   // It center the positioning point to the center of the ball
   
  
-  ball.style.top  = (maxY*y/180 + 200) + "px";
-  ball.style.left = (maxX*x/180 + 0) + "px";
+  ball.style.top  = (maxY*y/180 + 150) + "px";
+  ball.style.left = (maxX*x/50 - 50) + "px";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
