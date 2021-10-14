@@ -45,7 +45,7 @@ inicia();
 
 
 
-var ball   = document.querySelectorAll('#teste'), i;
+var ball   = document.querySelector('#recortes');
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
@@ -71,11 +71,10 @@ function handleOrientation(event) {
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
-
-  for (i = 0; i < ball.length; ++i) {
-    ball[i].style.top  = (maxY*y/180 - 10) + "px";
-    ball[i].style.left = (maxX*x/180 - 10) + "px";
-  }
+  
+ 
+  ball.style.top  = (maxY*y/180 - 10) + "px";
+  ball.style.left = (maxX*x/180 - 10) + "px";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);

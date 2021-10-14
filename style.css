@@ -1796,27 +1796,9 @@ section {
         transform: rotate(180deg);
     }
 
-    #teste {
-        height: 300px;
-        width: 150px;
-        z-index: 999;
-        position: absolute;
-        top: 50px;
-        left: 50px;
-    }
-
-    #folhateste {
-        height: auto;
-        width: 350px;
-        position: absolute;
-    }
-
-
-    #folhateste2 {
-        height: auto;
-        width: 350px;
-        position: absolute;
-        transform: rotate(20deg);
+    #recortes {
+        left: 0px;
+        top: 200px;
     }
 }
 
