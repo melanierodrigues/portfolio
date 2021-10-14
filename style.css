@@ -80,7 +80,6 @@ body {
     overscroll-behavior: contain;
 }
 
-
 header {
     display: none;
 }
@@ -140,7 +139,6 @@ section {
 }
 
 /* -------------------------------- Loading -------------------------------------- */ 
-
 #loading {
     height: 100vh;
     width: 100vw;
@@ -482,31 +480,40 @@ section {
 
 
 /* -------------------------------- Projecto 1 -------------------------------------- */
-.project1 {
+.project1, .project2, .project3 {
     scroll-snap-align: center;
     grid-template-columns: 10vw 1fr 1fr 10vw;
     grid-column-gap: 4vw;
     align-items: center;
-    background-color: var(--corproject1);
     position: sticky;
+}
+
+.project1 {
+    background-color: var(--corproject1);
     z-index: 4;
 }
 
-#hgroup2 {
-    color: var(--cor2);
+#hgroup2, #hgroup3, #hgroup4 {
     grid-column: 2;
     z-index: 999;
     transform: translateX(-10vw) translateY(0px) translateZ(-175px) scale(1.58) ;
     opacity: 0;
 }
 
-#risco {
+#hgroup2 {
+    color: var(--cor2);
+}
+
+#risco, #risco2, #risco3 {
     width: 140px;
     height: 2px;
-    background-color: var(--corriscosectionproject1);
     margin: 16px 0px 0px 0px;
     opacity: 0;
     transition: 0.2s ease-in-out;
+}
+
+#risco {
+    background-color: var(--corriscosectionproject1);
 }
 
 #rectangulo {
@@ -526,19 +533,21 @@ section {
     z-index: 999;
 }
 
-#link_site {
+#link_site, #link_site2, #link_site3 {
     padding: 16px;
     letter-spacing: 0.1em;
-    color: var(--corhgroug2);
     text-decoration: none;
     cursor: url(CursorB-01.png) 4 12, pointer;
-    opacity: 1;;
-    border: 1px solid var(--corhgroug2);
     margin-top: 32px;
-    background-color: var(--corlink_siteproject1);
     position: relative;
     left: 14.8vw;
     top: 23vh;
+}
+
+#link_site {
+    color: var(--corhgroug2);
+    border: 1px solid var(--corhgroug2);
+    background-color: var(--corlink_siteproject1);
 }
 
 @media(hover: hover) and (pointer: fine) {
@@ -806,21 +815,13 @@ section {
 
 /* -------------------------------- Projecto 2 -------------------------------------- */
 .project2 {
-    grid-template-columns: 10vw 1fr 1fr 10vw;
-    grid-column-gap: 4vw;
-    align-items: center;
     background-color: var(--corproject2);
-    position: sticky;
-    scroll-snap-align: center;
     z-index: 3;
 }
 
 #hgroup3 {
     color: var(--corhgroug3);
-    grid-column: 2;
-    opacity: 0;
     transform: rotateY(0deg);
-    transform: translateX(-10vw) translateY(0px) translateZ(-175px) scale(1.58);
     z-index: 5;
 }
 
@@ -836,12 +837,7 @@ section {
 }
 
 #risco2 {
-    width: 140px;
-    height: 2px;
     background-color: var(--corriscosectionproject2);
-    margin: 16px 0px 0px 0px;
-    opacity: 0;
-    transition: 0.2s ease-in-out;
 }
 
 #calculadora {
@@ -953,19 +949,10 @@ section {
 }
 
 #link_site2 {
-    padding: 16px;
-    letter-spacing: 0.1em;
-    text-decoration: none;
-    letter-spacing: 0.1em;
     color: var(--corhgroug3);
-    cursor: url(CursorB-01.png) 4 12, pointer;
-    opacity: 1;
     border: 1px solid var(--corhgroug3);
     background-color: var(--corlink_siteproject2);
-    margin-top: 32px;
-    position: relative;
-    left: 14.8vw;
-    top: 23vh;
+    left: 14vw;
 }
 
 @media(hover: hover) and (pointer: fine) {
@@ -1083,32 +1070,18 @@ section {
 
 /* -------------------------------- Projecto 3 -------------------------------------- */
 .project3 {
-    grid-template-columns: 10vw 1fr 1fr 10vw;
-    grid-column-gap: 4vw;
-    align-items: center;
     background-color: var(--corproject3);
-    position: sticky;
-    scroll-snap-align: center;
     z-index: 4;
 }
 
 #hgroup4 {
     color: var(--corhgroug4);
-    grid-column: 2;
     z-index: 5;
     transform: rotateY(0deg);
-    transform: translateX(-10vw) translateY(0px) translateZ(-175px) scale(1.58);
-    opacity: 0;
 }
 
 #risco3 {
-    width: 140px;
-    height: 2px;
-    background-color: var(--corriscosectionproject3);
-    margin: 16px 0px 0px 0px;
-    opacity: 0;
-    transition: 0.2s ease-in-out;
-    animation-play-state: paused;  
+    background-color: var(--corriscosectionproject3); 
 }
 
 #teste_pinypong {
@@ -1162,19 +1135,10 @@ section {
 }
 
 #link_site3 {
-    padding: 16px;
-    letter-spacing: 0.1em;
-    text-decoration: none;
-    letter-spacing: 0.1em;
     color: var(--corhgroug4);
-    cursor: url(CursorB-01.png) 4 12, pointer;
-    opacity: 1;
     border: 1px solid var(--corhgroug4);
     background-color: var(--corlink_siteproject3);
-    margin-top: 32px;
-    position: relative;
-    left: 14.8vw;
-    top: 23vh;
+    left: 14vw;
 }
 
 @media(hover: hover) and (pointer: fine) {
@@ -1246,34 +1210,29 @@ section {
     0% {
         opacity: 0;
     }
-      100% {
+    100% {
         opacity: 1;
-      }
- 
+    }
 }
 
 @keyframes p2 {
-      0% {
+    0% {
         opacity: 1;
         transform: translateX(-10px) rotate(90deg);
         transform-origin: 50% 50%;
-      }
-      25% {
-        opacity: 1;
+    }
+    25% {
         transform: translateX(200px) rotate(90deg);
-      }
-      50% {
-        opacity: 1;
+    }
+    50% {
         transform: translateX(150px) rotate(90deg);
-      }
-      75% {
-        opacity: 1;
+    }
+    75% {
         transform: translateX(-120px) rotate(90deg);
-      }
-      100% {
-        opacity: 1;
+    }
+    100% {
         transform: translateX(-10px) rotate(90deg);
-      }
+    }
 }
 
 @keyframes p1 {
@@ -1281,46 +1240,38 @@ section {
         opacity: 1;
         transform: translateX(0px) rotate(90deg);
         transform-origin: 50% 50%;
-      }
-      25% {
-        opacity: 1;
+    }
+    25% {
         transform: translateX(-10px) rotate(90deg);
-      }
-      50% {
-        opacity: 1;
+    }
+    50% {
         transform: translateX(100px) rotate(90deg);
-      }
-      75% {
-        opacity: 1;
+    }
+    75% {
         transform: translateX(200px) rotate(90deg);
-      }
-      100% {
-        opacity: 1;
+    }
+    100% {
         transform: translateX(0px) rotate(90deg);
-      }
+    }
 }
 
 @keyframes bola_pinypong {
     0% {
         opacity: 1;
         transform: translateY(940%);
-      }
-      25% {
-        opacity: 1;
+    }
+    25% {
         transform: translateY(-940%) translateX(100px);
-      }
-      50% {
-        opacity: 1;
+    }
+    50% {
         transform: translateY(940%) translateX(100px);
-      }
-      75% {
-        opacity: 1;
+    }
+    75% {
         transform: translateY(-940%);
-      }
-      100% {
-        opacity: 1;
+    }
+    100% {
         transform: translateY(940%) translateX(0px);
-      }
+    }
 }
 
 /* -------------------------------- END - Projecto 3 -------------------------------------- */
@@ -1350,7 +1301,6 @@ section {
     letter-spacing: 0.1em;
     color: var(--corhgroug5);
     cursor: url(CursorB-01.png) 4 12, pointer;
-    opacity: 1;
     border: 1px solid var(--corhgroug5);
     background-color: none;
     display: inline-block;
@@ -1369,7 +1319,6 @@ section {
 }
 
 #circulo {
-    background-color: #aaa;
     border-radius: 50%;
     width: 300px;
     height: 300px;
@@ -1398,7 +1347,7 @@ section {
     position: absolute;
     right: 0px;
     bottom: 0px;
-    filter:brightness(150%) contrast(130%) grayscale(100%);
+    filter: brightness(150%) contrast(130%) grayscale(100%);
 }
 
 /* -------------------------------- END - About Me -------------------------------------- */
@@ -1447,13 +1396,11 @@ section {
         bottom: 0px;
     }
 
-
     #loading {
         grid-column-gap: 1vw;
         grid-row-gap: 1vw;
     }
   }
-
 
 
 @media screen and (max-width: 1150px) {
@@ -1462,7 +1409,7 @@ section {
         left: 8.5vw;
     }
 
-    .project1, .project2, .project3, .project4 {
+    .project1, .project2, .project3, .project4, .aboutme {
         display: grid;
         grid-template-columns: auto 1fr 1fr auto;
         grid-column-gap: 64px;
@@ -1477,9 +1424,12 @@ section {
         max-height: 350px;
     }
     
-
     #hgroup2, #hgroup3, #hgroup4, #hgroup5 {
         grid-column: 2;
+    }
+
+    #hgroup2, #hgroup3, #hgroup4 {
+        transform: translateX(3vw);
     }
 
     #rodas {
@@ -1580,7 +1530,7 @@ section {
     #circulo {
         grid-column: 2;
         grid-row: 3;
-      }
+    }
 
 }
 
