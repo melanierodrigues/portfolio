@@ -79,6 +79,8 @@ function handleOrientation(event) {
 if (screen.width > 850 && screen.height < 480) {
     // sirva a versão pra celular
     recortes1.style.transform = "translateY(-550px)" + "rotate(90deg)" + "translateX(550px)";
+    recortes1.style.top  = (maxY*y/130 + 150) + "px";
+    recortes1.style.left = (maxX*x/180 - 150) + "px";
 }
 }
 window.addEventListener('deviceorientation', handleOrientation);
