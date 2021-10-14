@@ -334,6 +334,7 @@ section {
 }
 
 #recortes {
+    transition: 0.01s ease-in-out;
     width: calc(100vw + 20px);
     height: auto;
     position: absolute;
