@@ -26,7 +26,7 @@ function inicia() {
     setTimeout(inicia, 3000);
 };
 
-/*
+
 // Folhas - Mousemove
 document.addEventListener("mousemove", parallax);
 
@@ -41,16 +41,14 @@ function parallax(e){
     });
 }
 inicia();
-*/
 
-
-
-var ball   = document.querySelector('#recortes');
-var garden = document.querySelector('.hello');
+// Recortes - deviceorientation
+var recortes1 = document.querySelector('#recortes');
+var hello1 = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
-var maxX = garden.clientWidth  - ball.clientWidth;
-var maxY = garden.clientHeight - ball.clientHeight;
+var maxX = hello1.clientWidth  - recortes1.clientWidth;
+var maxY = hello1.clientHeight - recortes1.clientHeight;
 
 function handleOrientation(event) {
   var x = event.beta;  // In degree in the range [-180,180)
@@ -73,15 +71,10 @@ function handleOrientation(event) {
   // It center the positioning point to the center of the ball
   
  
-  ball.style.top  = (maxY*y/180 + 150) + "px";
-  ball.style.left = (maxX*x/180 - 150) + "px"; //(maxX*x/100 + 0) + "px"
+  recortes1.style.top  = (maxY*y/180 + 150) + "px";
+  recortes1.style.left = (maxX*x/180 - 150) + "px";
 }
-
 window.addEventListener('deviceorientation', handleOrientation);
-
-
-  inicia();
-
 
 //
 
