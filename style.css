@@ -1827,7 +1827,7 @@ section {
 
     #hgroup1 {
         transform: translateX(0px) translateY(-50px) translateZ(-200px) scale(0.5);
-        transform: translateX(-30px) translateY(-50px) translateZ(-50px) scale(0.6);
+        transform: translateX(-100px) translateY(-50px) translateZ(-50px) scale(0.6);
     }
 
     #hgroup2, #hgroup3, #hgroup4, #hgroup5 {
@@ -1854,13 +1854,20 @@ section {
         position: absolute;
     }
 
-    /*
     @media (pointer: coarse) {
         #recortes {
-            transform: translateX(100px) translateY(-250px) rotate(90deg) scale(0.8);
+            display: none;
+        }
+
+        #folhas {
+            opacity: 1;
+            width: auto;
+            height: auto;
+            transform: translateX(100px) scale(1.5);
+            z-index: -999;
         }
     }
-    */
+
 
     @keyframes rolar {
         0% {
