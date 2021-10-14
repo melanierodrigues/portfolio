@@ -68,9 +68,8 @@ function handleOrientation(event) {
   // It center the positioning point to the center of the ball
   
   if (screen.width < 480 && screen.height < 850) {
-    // sirva a versão pra celular
-    recortes1.style.top  = (maxY*y/130 + 150) + "px";
-    recortes1.style.left = (maxX*x/180 - 150) + "px";
+        recortes1.style.top  = (maxY*y/130 + 150) + "px";
+        recortes1.style.left = (maxX*x/180 - 150) + "px";
     } 
 }
 window.addEventListener('deviceorientation', handleOrientation);
