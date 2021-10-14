@@ -74,7 +74,7 @@ function handleOrientation(event) {
   
  
   ball.style.top  = (maxY*y/180 + 150) + "px";
-  ball.style.left = (maxX*x/50 - 50) + "px";
+  ball.style.left = (maxX*x + 0) + "px";
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
