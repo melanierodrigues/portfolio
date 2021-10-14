@@ -45,7 +45,7 @@ inicia();
 
 
 
-var ball   = document.querySelectorAll('#teste');
+var ball   = document.querySelectorAll('#teste'), i;
 var garden = document.querySelector('.hello');
 var output = document.querySelector('.output');
 
@@ -71,21 +71,11 @@ function handleOrientation(event) {
 
   // 10 is half the size of the ball
   // It center the positioning point to the center of the ball
- 
-  //ball.style.top  = (maxY*y/180 - 10) + "px";
-  //ball.style.left = (maxX*x/180 - 10) + "px";
 
-
-  document.querySelectorAll('#folha').forEach(function(move) {
-
-    var value_data = move.getAttribute("data-value");
-    var m = (x * value_data) / 300;
-    var l = (y * value_data) / 300;
-
-    move.style.transform = "translateX(" + m + "px) translateY(" + l + "px)" + " scale(0.9)"; 
-});
-
-
+  for (i = 0; i < ball.length; ++i) {
+    ball[i].style.top  = (maxY*y/180 - 10) + "px";
+    ball[i].style.left = (maxX*x/180 - 10) + "px";
+  }
 }
 
 window.addEventListener('deviceorientation', handleOrientation);
